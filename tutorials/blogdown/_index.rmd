@@ -1,0 +1,19 @@
++++
+title = "Building a Website with Blogdown"
+description = "A short tutorial on using blogdown to build a website"
+weight = 110
++++
+
+This website is built with blogdown. 
+
+```
+setwd("/Users/path/to/your/files/username.github.io")
+blogdown::new_site(dir = "usernameFiles", #New Directory within working directory where web content will be stored
+                   theme = 'vjeantet/hugo-theme-docdock', #theme information
+                   format = 'toml') #specify toml instead of yaml
+
+setwd("bonetradeFiles")
+blogdown::build_site()
+blogdown::serve_site()
+```
+

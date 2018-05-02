@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/scope/</loc>
+  </url>
+  
+  <url>
+    <loc>/scope/schedule/</loc>
+  </url>
+  
+  <url>
+    <loc>/code/</loc>
+  </url>
+  
+  <url>
+    <loc>/papers/</loc>
+  </url>
+  
+  <url>
+    <loc>/tutorials/</loc>
+    <lastmod>2018-04-16T15:16:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/scope/bibliography/</loc>
+  </url>
+  
+  <url>
+    <loc>/scope/outputs/</loc>
+    <lastmod>2018-04-16T15:16:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorials/blogdown/</loc>
+  </url>
+  
+  <url>
+    <loc>/scope/graduate-opportunities/</loc>
+  </url>
+  
+  <url>
+    <loc>/tutorials/scrapy-instagram/</loc>
+  </url>
+  
+  <url>
+    <loc>/tutorials/sqlite/</loc>
+  </url>
+  
+  <url>
+    <loc>/tutorials/sqlite-to-r/</loc>
+    <lastmod>2018-04-30T11:30:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/scope/end-of-project/</loc>
+  </url>
+  
+  <url>
+    <loc>/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</loc>
+    <lastmod>2018-04-30T11:30:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/update/2018-04-16-getting-started/</loc>
+    <lastmod>2018-04-16T15:16:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-04-16T15:16:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/credits/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/update/</loc>
+    <lastmod>2018-04-30T11:30:45-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
