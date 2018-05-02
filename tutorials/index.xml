@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials on The Bonetrade Project</title>
-    <link>/tutorials/</link>
+    <link>http://bonetrade.github.io/tutorials/</link>
     <description>Recent content in Tutorials on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Apr 2018 15:16:31 -0400</lastBuildDate>
     
-	<atom:link href="/tutorials/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://bonetrade.github.io/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

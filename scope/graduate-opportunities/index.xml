@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graduate Opportunities on The Bonetrade Project</title>
-    <link>/scope/graduate-opportunities/</link>
+    <link>http://bonetrade.github.io/scope/graduate-opportunities/</link>
     <description>Recent content in Graduate Opportunities on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/scope/graduate-opportunities/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://bonetrade.github.io/scope/graduate-opportunities/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
