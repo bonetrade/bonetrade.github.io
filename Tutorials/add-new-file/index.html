@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bonetrade Project</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.39" />
+<title>Adding New Content Via Github :: The Bonetrade Project</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/bonetrade.github.io";
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-117669422-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="https://hypothes.is/embed.js" async></script>
+    
+  </head>
+  <body data-url="/tutorials/add-new-file/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://bonetrade.github.io">The Bonetrade Project</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/bonetrade"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/info-sheet.pdf"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download Info Sheet</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/scope"  rel="noopener">
+                  <i class='fa fa-info-circle'></i> <label>Scope</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/scope/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/scope/">Scope</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/scope/schedule/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/schedule/">Schedule</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/bibliography/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/bibliography/">Bibliography</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/outputs/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/outputs/">Expectations for What We&#39;ll Learn</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/graduate-opportunities/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/graduate-opportunities/">Graduate Opportunities</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/end-of-project/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/end-of-project/">When This Project Ends</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/code/" class="dd-item
+        ">
+      <div>
+      <a href="/code/">Code</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/papers/" class="dd-item
+        ">
+      <div>
+      <a href="/papers/">Papers and Publications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/tutorials/">Tutorials</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/tutorials/blogdown/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/blogdown/">Building a Website with Blogdown</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/add-new-file/" class="dd-item parent active
+        ">
+      <div>
+      <a href="/tutorials/add-new-file/">Adding New Content Via Github</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/scrapy-instagram/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/scrapy-instagram/">Scraping Instagram Post Metadata</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/sqlite/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/sqlite/">Setting up a SQLite DB</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/sqlite-to-r/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/sqlite-to-r/">Importing SQLite DB into R</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/update/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/update/">Updates</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" class="dd-item">
+        <div>
+          <a href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/">
+            Using Etudier to Jump Start a Literature Review
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item">
+        <div>
+          <a href="/update/2018-04-16-getting-started/">
+            Getting Started!
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<p>Shawn Graham, Carleton University <br> Damien Huffer, Stockholm University <br><img src="/carleton-logo.png"><img src="/stockholm-logo.gif"> </p>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/scope/" >
+   Scope</option>
+    <option value="/code/" >
+   Code</option>
+    <option value="/papers/" >
+   Papers and Publications</option>
+    <option value="/tutorials/" >
+   Tutorials</option> 
+    <option value="/tutorials/blogdown/" >
+  - 
+   Building a Website with Blogdown</option>
+    <option value="/tutorials/add-new-file/"  selected>
+  - 
+   Adding New Content Via Github</option> 
+  
+    <option value="/tutorials/scrapy-instagram/" >
+  - 
+   Scraping Instagram Post Metadata</option>
+    <option value="/tutorials/sqlite/" >
+  - 
+   Setting up a SQLite DB</option>
+    <option value="/tutorials/sqlite-to-r/" >
+  - 
+   Importing SQLite DB into R</option>
+  
+    <option value="/update/" >
+   Updates</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/bonetrade.github.io";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Adding New Content Via Github</h1>
+    
+    
+    
+
+
+
+<p>This project website, its public face, is generated using Blogdown. Blogdown itself is built on Hugo, a generator for static websites from simple textfiles. The reason that we use the Blogdown version is that it can handle text written in R-Markdown. And why does R-Markdown matter? This is a version of the markdown text file that can have embedded R code in it, which R can run when the site is generated - and so we can integrate analytical code into our writing.</p>
+
+<p>Remember when your math teacher said, &lsquo;show your work&rsquo;? Turns out, that is profoundly important for reproducibility and replicability in research. Given that we work at public institutions, using public money, we rather think that&rsquo;s important.</p>
+
+<p>The other nice aspect to using simple text files, a site generator, and Github, is that all of our writing and research is kept under version control. Github allows us to edit files directly on their website, which is handy for quick things like a blog post.</p>
+
+<h3 id="getting-started">Getting started</h3>
+
+<ol>
+<li>Make sure you have a <a href="http://github">github</a> account.</li>
+<li>Make sure that you are added as a member of the organization that controls the repo in question - in this case, <a href="https://github.com/bonetrade/blog-source-files">&lsquo;blog source files&rsquo;</a>. (On Shawn&rsquo;s computer, he&rsquo;s got the &lsquo;content&rsquo; subfolder of the blogdown folder under version control).</li>
+<li>Organizations you belong to will be shown to the bottom left of the screen when you&rsquo;re on your own Github profile page. Once you&rsquo;re a member, login to Github and navigate directly to the repo. So, make sure you&rsquo;re in <code>blog-source-files</code>. You now have displayed the list of folders from which the content of this site is created.</li>
+</ol>
+
+<h3 id="writing">Writing</h3>
+
+<ol>
+<li>Click on the &lsquo;Updates&rsquo; folder. This is the blog portion of this site.</li>
+<li>Click on &lsquo;create new file&rsquo;</li>
+<li>You should see the editor, like so:</li>
+</ol>
+
+<p><img src="new-file-on-github.png" alt="Editor window on Github" /></p>
+
+<p>To make writing a bit more pleasant, tick the &lsquo;no wrap&rsquo; dropdown at the right hand side and select &lsquo;soft wrap&rsquo;.</p>
+
+<p>Give the blog post a name where the first part is the date, eg: <code>2018-05-03-learning-a-new-tool.md</code>. The <code>.md</code> part tells us that this is a text file written in the markdown format. Please don&rsquo;t forget that!</p>
+
+<p>Make sure that the first text you write is the post <strong>metadata</strong>, which follows the pattern below (this is &lsquo;toml&rsquo; format, by the way):</p>
+
+<pre><code>+++
+title= &quot;Getting Started!&quot;
+date= 2018-04-16T15:16:31-04:00
+description = &quot;getting started&quot;
+draft= false
++++
+
+2018-04-16
+
+### Getting Started!
+
+We are pleased to announce....
+
+</code></pre>
+
+<p>And that&rsquo;s all there is to it. Follow <a href="https://daringfireball.net/projects/markdown/syntax">markdown conventions</a>. <strong>WARNING</strong> Nothing is saved as you type. To save your work, you have to make a &lsquo;commit&rsquo;:</p>
+
+<p><img src="commit-file-on-github.png" alt="Screenshot of ‘commiting’ a file on github" />.</p>
+
+<p>Give your commit a short descriptive message - this will appear in the list of &lsquo;snapshots&rsquo; that comprise the history of this repository - and add a longer message if you like. Commit directly to the master branch.</p>
+
+<h3 id="adding-images">Adding images</h3>
+
+<p>Any images you want to have appear in the post need to be in this folder as well. In your text, you can add an image using markdown like so: <code>![image descriptive text](imagename.png)</code> . Then, after you&rsquo;ve committed your text, drag-and-drop your image into the repo (literally drag it onto the list of files in this folder). You&rsquo;ll be asked to make a commit message for this too.</p>
+
+<h3 id="r-markdown">R markdown</h3>
+
+<p>Writing an R markdown post works exactly the same way as everything else described above; just make sure that you follow the conventions correctly. Any data files that you want to use in your R markdown should be uploaded to this repository (ie they were in the same working directory when you wrote the R markdown, so they should be in the same folder in the repo when I build the website).</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/tutorials/blogdown/" title="Building a Website with Blogdown"> <i class="fa fa-chevron-left"></i><label>Building a Website with Blogdown</label></a>
+    <a class="nav nav-next" href="/tutorials/scrapy-instagram/" title="Scraping Instagram Post Metadata" style="margin-right: 0px;"><label>Scraping Instagram Post Metadata</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 30/04/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/bonetrade/bonetrade.github.io/Tutorials/add-new-file/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
+
+<p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

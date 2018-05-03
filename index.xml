@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Bonetrade: Studying the Online Trade in Human Remains on The Bonetrade Project</title>
+    <link>https://bonetrade.github.io/</link>
+    <description>Recent content in The Bonetrade: Studying the Online Trade in Human Remains on The Bonetrade Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Apr 2018 15:16:31 -0400</lastBuildDate>
+    
+	<atom:link href="https://bonetrade.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Etudier to Jump Start a Literature Review</title>
+      <link>https://bonetrade.github.io/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</link>
+      <pubDate>Mon, 30 Apr 2018 11:30:45 -0400</pubDate>
+      
+      <guid>https://bonetrade.github.io/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</guid>
+      <description>2018-04-30
+The Literature Review How do you start a literature review on a new project? We&amp;rsquo;re not starting from scratch, of course - we&amp;rsquo;ve got the pages of bibliography that we generated when we first starting scratching out what this project could be about. We started that step by considering the bibliography we had to hand as we wrote our first paper. Nothing is ever truly from scratch, in academia.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started!</title>
+      <link>https://bonetrade.github.io/update/2018-04-16-getting-started/</link>
+      <pubDate>Mon, 16 Apr 2018 15:16:31 -0400</pubDate>
+      
+      <guid>https://bonetrade.github.io/update/2018-04-16-getting-started/</guid>
+      <description>2018-04-16
+We&amp;rsquo;re underway! We received word at the end of March that this project has been funded. Since then, we&amp;rsquo;ve been doing the administrative work to get the project up and running - figuring out how to advertise for students, how to enable those students to study at Stockholm for a term or two, setting up the public face of this project, figuring out the internals of the research accounting system.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://bonetrade.github.io/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bonetrade.github.io/_footer/</guid>
+      <description>This research was supported by the Social Sciences and Humanities Research Council of Canada</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>https://bonetrade.github.io/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bonetrade.github.io/credits/</guid>
+      <description>Principle Investigators Shawn Graham Graham is an archaeologist who is currently Associate Professor of Digital Humanities in the History Department at Carleton University. With Ian Milligan and Scott Weingart, he is the author of ‘Exploring Historical Big Data: The &amp;lsquo;Historian’s Macroscope’ (2015). He has written a number of tutorials for The Programming Historian and his research blog (e.g., 2016b) on different computational techniques for both analysis and representation of historical data.</description>
+    </item>
+    
+  </channel>
+</rss>
