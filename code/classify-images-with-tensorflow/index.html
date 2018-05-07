@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.39" />
-<title>Scraping Instagram Post Metadata :: The Bonetrade Project</title>
+<title>Classify Images with Tensorflow :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 <script src="https://hypothes.is/embed.js" async></script>
     
   </head>
-  <body data-url="/tutorials/scrapy-instagram/">
+  <body data-url="/code/classify-images-with-tensorflow/">
     
       <header>
   <div class="logo">
@@ -112,13 +112,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/code/" class="dd-item haschildren
+    <li data-nav-id="/code/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/code/">Code</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/code/">Code</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/code/classify-images-with-tensorflow/" class="dd-item
+    <li data-nav-id="/code/classify-images-with-tensorflow/" class="dd-item parent active
         ">
       <div>
       <a href="/code/classify-images-with-tensorflow/">Classify Images with Tensorflow</a><i class="fa fa-circle-thin read-icon"></i>
@@ -138,11 +139,10 @@
       <a href="/papers/">Papers and Publications</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/" class="dd-item parent haschildren
+    <li data-nav-id="/tutorials/" class="dd-item haschildren
         ">
       <div>
-      <a href="/tutorials/">Tutorials</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/tutorials/">Tutorials</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/tutorials/blogdown/" class="dd-item
@@ -157,7 +157,7 @@
       <a href="/tutorials/add-new-file/">Adding New Content Via Github</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/scrapy-instagram/" class="dd-item parent active
+    <li data-nav-id="/tutorials/scrapy-instagram/" class="dd-item
         ">
       <div>
       <a href="/tutorials/scrapy-instagram/">Scraping Instagram Post Metadata</a><i class="fa fa-circle-thin read-icon"></i>
@@ -222,28 +222,19 @@
     <option value="/scope/" >
    Scope</option>
     <option value="/code/" >
-   Code</option>
+   Code</option> 
+    <option value="/code/classify-images-with-tensorflow/"  selected>
+  - 
+   Classify Images with Tensorflow</option> 
+  
+    <option value="/code/affinity-propagation-in-r/" >
+  - 
+   Affinity Propagation in R</option>
+  
     <option value="/papers/" >
    Papers and Publications</option>
     <option value="/tutorials/" >
-   Tutorials</option> 
-    <option value="/tutorials/blogdown/" >
-  - 
-   Building a Website with Blogdown</option>
-    <option value="/tutorials/add-new-file/" >
-  - 
-   Adding New Content Via Github</option>
-    <option value="/tutorials/scrapy-instagram/"  selected>
-  - 
-   Scraping Instagram Post Metadata</option> 
-  
-    <option value="/tutorials/sqlite/" >
-  - 
-   Setting up a SQLite DB</option>
-    <option value="/tutorials/sqlite-to-r/" >
-  - 
-   Importing SQLite DB into R</option>
-  
+   Tutorials</option>
     <option value="/update/" >
    Updates</option>
 
@@ -268,81 +259,16 @@
       </div>
     
 
-    <h1>Scraping Instagram Post Metadata</h1>
+    <h1>Classify Images with Tensorflow</h1>
     
     
     
 
+<p>In our <a href="/papers">2018 paper, &lsquo;Fleshing out the Bones&rsquo;</a>, we used Duhaime&rsquo;s modified <code>classify_images.py</code> script using Tensorflow and Inception 3 to extract the image vectors from the second-to-last layer of the cnn (before labelling). These image vectors can then be fed through <code>cluster_vectors.py</code> to find nearest neighbors. This data can be visualized with t-sne; then we use affinity propagation to see the clusters in R.</p>
 
+<p>You may obtain and run the code for yourself in our online <a href="https://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master">jupyter notebook binder</a>.</p>
 
-<p>Instagram used to have an API that allowed a very comprehensive exploration of the metadata attached to each . To use this API, one had to register as a developer and agree to the terms of service. <a href="http://pablobarbera.com/">Pablo Barbera</a> from the London School of Economics has developed an excellent package for R, <a href="https://github.com/pablobarbera/instaR">instaR</a> to work with the API. However, changes to the API and the approval process in the last few years has restricted use of the public API to mostly commercial purposes. That is to say, they wish to monetize the content. The result is that using Barbera&rsquo;s package is often not feasible for us.</p>
-
-<p>Other alternatives are possible, and while they do not necessarily provide complete access to the full stream of <em>possible</em> data, they do provide an awful lot. In essence, these approaches involve mimicing an individual paging through search results, very very quickly.</p>
-
-<p>Here we will get started with a python package written by <a href="https://github.com/h4t0n">Github user h4t0n, Andrea Tarquini</a> that depends on the <a href="https://scrapy.org/">Scrapy</a> framework.</p>
-
-<h2 id="requirements">Requirements:</h2>
-
-<ul>
-<li>Python</li>
-<li>Scrapy</li>
-</ul>
-
-<p>If you are on a mac, you already have python installed. We will install Scrapy inside of a virtual environment, so as to avoid making dependency conflicts and so on with other python packages on our machine.</p>
-
-<pre><code>$ mkdir scrapytest
-$ virtualenv scrapytest
-$ source scrapytest/bin/activate
-</code></pre>
-
-<p>Install Scrapy: <code>$ pip install scrapy</code></p>
-
-<p>Download the <a href="https://github.com/h4t0n/instagram-scraper">instagram-scraper</a> from the repository.</p>
-
-<p>Unzip that file. Then, make a new text file at the same level as the instagram-scraper folder. Give that file the extension <code>.cfg</code></p>
-
-<pre><code>├── instagram-scraper
-│   ├── __init__.py
-│   ├── items.py
-│   ├── pipelines.py
-│   ├── settings.py
-│   └── spiders
-│       ├── __init__.py
-│       └── hashtag.py
-└── scrapy.cfg
-</code></pre>
-
-<p>Edit that file so that it contains the basic configuration information scrapy needs in order to pull together the scraper that h4t0n made:</p>
-
-<pre><code># basic information for scrapy cfg file
-
-[settings]
-default = instagram-scraper.settings
-
-[deploy]
-#url = http://localhost:6800/
-project = tutorial
-</code></pre>
-
-<p>The first thing this file does is tell scrapy where to find the settings.py file in the <code>instagram-scraper</code> folder. The second line isn&rsquo;t even really needed, but these are the defaults when creating a new scrapy scraper, so we&rsquo;ll keep them for posterity.</p>
-
-<h2 id="running-the-scraper">Running the scraper</h2>
-
-<p>If you look in the <code>instagram-scraper</code> folder, you&rsquo;ll notice the <code>spiders</code> subfolder. The <code>hashtag.py</code> file is the one that lays out how to interact with Instagram. We want Scrapy to use that file, so:</p>
-
-<p><code>$ scrapy crawl hashtag</code></p>
-
-<p>You will then be prompted to enter the target hashtag. The spider will then begin searching and scraping. Output prints to the terminal window and to file.</p>
-
-<h2 id="output">Output</h2>
-
-<p>The output will be in a new folder, &lsquo;scraped&rsquo; and subfolder, &lsquo;hashtag&rsquo;. Each hashtag search will have its own subfolder, and the output file there will have its timestamp as its name. Each line in the output is json formatted. You can concatenate all of the files together with <code>cat * &gt; output.json</code>. To make a properly formatted json file, open <code>output.json</code> in a text editor, add <code>,</code> to each line (except the last one), and put a <code>[</code> at the start of the file and a <code>]</code> at the end.</p>
-
-<p>The data is now ready to be put into a database for further querying.</p>
-
-<p>Deactivate your virtualenv:</p>
-
-<p><code>$ deactivate</code></p>
+<p>The repository for this data is at <a href="https://osf.io/9cfja/">https://osf.io/9cfja/</a>.</p>
 
 
 
@@ -350,8 +276,8 @@ project = tutorial
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/tutorials/add-new-file/" title="Adding New Content Via Github"> <i class="fa fa-chevron-left"></i><label>Adding New Content Via Github</label></a>
-    <a class="nav nav-next" href="/tutorials/sqlite/" title="Setting up a SQLite DB" style="margin-right: 0px;"><label>Setting up a SQLite DB</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/code/" title="Code"> <i class="fa fa-chevron-left"></i><label>Code</label></a>
+    <a class="nav nav-next" href="/code/affinity-propagation-in-r/" title="Affinity Propagation in R" style="margin-right: 0px;"><label>Affinity Propagation in R</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -367,7 +293,7 @@ project = tutorial
   
 
     <div class="github-link">
-      <a href="https://github.com/bonetrade/bonetrade.github.io/tutorials/Scrapy-Instagram/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/bonetrade/bonetrade.github.io/Code/classify-images-with-tensorflow/_index.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>
