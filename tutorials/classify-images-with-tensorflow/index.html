@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.39" />
-<title>Getting Started! :: The Bonetrade Project</title>
+<title>Classify Images with Tensorflow :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 <script src="https://hypothes.is/embed.js" async></script>
     
   </head>
-  <body data-url="/update/2018-04-16-getting-started/">
+  <body data-url="/tutorials/classify-images-with-tensorflow/">
     
       <header>
   <div class="logo">
@@ -118,10 +118,11 @@
       <a href="/papers/">Papers and Publications</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/" class="dd-item haschildren
+    <li data-nav-id="/tutorials/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/tutorials/">Tutorials</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/tutorials/">Tutorials</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/tutorials/blogdown/" class="dd-item
@@ -154,10 +155,11 @@
       <a href="/tutorials/sqlite-to-r/">Importing SQLite DB into R</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/classify-images-with-tensorflow/" class="dd-item haschildren
+    <li data-nav-id="/tutorials/classify-images-with-tensorflow/" class="dd-item parent active haschildren
         ">
       <div>
-      <a href="/tutorials/classify-images-with-tensorflow/">Classify Images with Tensorflow</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/tutorials/classify-images-with-tensorflow/">Classify Images with Tensorflow</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" class="dd-item
@@ -170,11 +172,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/update/" class="dd-item parent haschildren
+    <li data-nav-id="/update/" class="dd-item haschildren
         ">
       <div>
-      <a href="/update/">Updates</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/update/">Updates</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" class="dd-item">
@@ -184,7 +185,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item active">
+      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item">
         <div>
           <a href="/update/2018-04-16-getting-started/">
             Getting Started!
@@ -218,12 +219,32 @@
     <option value="/papers/" >
    Papers and Publications</option>
     <option value="/tutorials/" >
-   Tutorials</option>
-    <option value="/update/" >
-   Updates</option> 
-      <option value="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" >- Using Etudier to Jump Start a Literature Review</option>
-      <option value="/update/2018-04-16-getting-started/"  selected>- Getting Started!</option>
+   Tutorials</option> 
+    <option value="/tutorials/blogdown/" >
+  - 
+   Building a Website with Blogdown</option>
+    <option value="/tutorials/add-new-file/" >
+  - 
+   Adding New Content Via Github</option>
+    <option value="/tutorials/scrapy-instagram/" >
+  - 
+   Scraping Instagram Post Metadata</option>
+    <option value="/tutorials/sqlite/" >
+  - 
+   Setting up a SQLite DB</option>
+    <option value="/tutorials/sqlite-to-r/" >
+  - 
+   Importing SQLite DB into R</option>
+    <option value="/tutorials/classify-images-with-tensorflow/"  selected>
+  - 
+   Classify Images with Tensorflow</option> 
+    <option value="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" >
+  -- 
+   Affinity Propagation in R</option>
   
+  
+    <option value="/update/" >
+   Updates</option>
 
 
 
@@ -246,29 +267,25 @@
       </div>
     
 
-    <h1>Getting Started!</h1>
+    <h1>Classify Images with Tensorflow</h1>
     
     
     
-    
 
-<p>2018-04-16</p>
+<p>In our <a href="/papers">2018 paper, &lsquo;Fleshing out the Bones&rsquo;</a>, we used Duhaime&rsquo;s modified <code>classify_images.py</code> script using Tensorflow and Inception 3 to extract the image vectors from the second-to-last layer of the cnn (before labelling). These image vectors can then be fed through <code>cluster_vectors.py</code> to find nearest neighbors. This data can be visualized with t-sne; then we use affinity propagation to see the clusters in R.</p>
 
-<h3 id="we-re-underway">We&rsquo;re underway!</h3>
+<p>You may obtain and run the code for yourself in our online <a href="https://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master">jupyter notebook binder</a>.</p>
 
-<p>We received word at the end of March that this project has been funded. Since then, we&rsquo;ve been doing the administrative work to get the project up and running - figuring out how to advertise for students, how to enable those students to study at Stockholm for a term or two, setting up the public face of this project, figuring out the internals of the research accounting system.</p>
+<p>The repository for this data is at <a href="https://osf.io/9cfja/">https://osf.io/9cfja/</a>.</p>
 
-<p>We also took advantage of the experience of writing this proposal to run a small experiment in using Tensorflow on our previous corpus (<a href="http://intarch.ac.uk/journal/issue45/5/index.html">Huffer &amp; Graham 2017</a>) of Instagram materials. We wrote that up for the <a href="https://journal.caa-international.org/">Journal of Computer Applications in Archaeology</a> and submitted it around the same time as we submitted the proposal. This was accepted with revisions, and is now in the pipeline. We hope to see it come out shortly. That paper was also the <a href="https://shawngraham.github.io/presentations/saa2018.html#/">nucleus for a paper</a> at the Society for American Archaeology conference this April in Washington DC. We also presented a related paper, drawing on Damien&rsquo;s postdoctoral work- Huffer and Graham, Bioarchaeological Approaches to Investigating Supply, Demand and Authenticity in the Colonial-era Human Remains Trade.</p>
-
-<p>I guess this all means: we&rsquo;re hitting the ground running!</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" title="Using Etudier to Jump Start a Literature Review"> <i class="fa fa-chevron-left"></i><label>Using Etudier to Jump Start a Literature Review</label></a>
-    <a class="nav nav-next" href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" title="Using Etudier to Jump Start a Literature Review" style="margin-right: 0px;"><label>Using Etudier to Jump Start a Literature Review</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" title="Affinity Propagation in R"> <i class="fa fa-chevron-left"></i><label>Affinity Propagation in R</label></a>
+    <a class="nav nav-next" href="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" title="Affinity Propagation in R" style="margin-right: 0px;"><label>Affinity Propagation in R</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -282,13 +299,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 16/04/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="https://github.com/bonetrade/bonetrade.github.io/update/2018-04-16-getting-started.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/bonetrade/bonetrade.github.io/tutorials/classify-images-with-tensorflow/_index.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.39" />
-<title>Getting Started! :: The Bonetrade Project</title>
+<title>Affinity Propagation in R :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 <script src="https://hypothes.is/embed.js" async></script>
     
   </head>
-  <body data-url="/update/2018-04-16-getting-started/">
+  <body data-url="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/">
     
       <header>
   <div class="logo">
@@ -118,10 +118,11 @@
       <a href="/papers/">Papers and Publications</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/" class="dd-item haschildren
+    <li data-nav-id="/tutorials/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/tutorials/">Tutorials</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/tutorials/">Tutorials</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/tutorials/blogdown/" class="dd-item
@@ -154,13 +155,14 @@
       <a href="/tutorials/sqlite-to-r/">Importing SQLite DB into R</a><i class="fa fa-circle-thin read-icon"></i>
       </div>
     </li>
-    <li data-nav-id="/tutorials/classify-images-with-tensorflow/" class="dd-item haschildren
+    <li data-nav-id="/tutorials/classify-images-with-tensorflow/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/tutorials/classify-images-with-tensorflow/">Classify Images with Tensorflow</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/tutorials/classify-images-with-tensorflow/">Classify Images with Tensorflow</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" class="dd-item
+    <li data-nav-id="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" class="dd-item parent active
         ">
       <div>
       <a href="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/">Affinity Propagation in R</a><i class="fa fa-circle-thin read-icon"></i>
@@ -170,11 +172,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/update/" class="dd-item parent haschildren
+    <li data-nav-id="/update/" class="dd-item haschildren
         ">
       <div>
-      <a href="/update/">Updates</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/update/">Updates</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" class="dd-item">
@@ -184,7 +185,7 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
-      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item active">
+      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item">
         <div>
           <a href="/update/2018-04-16-getting-started/">
             Getting Started!
@@ -218,12 +219,33 @@
     <option value="/papers/" >
    Papers and Publications</option>
     <option value="/tutorials/" >
-   Tutorials</option>
-    <option value="/update/" >
-   Updates</option> 
-      <option value="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" >- Using Etudier to Jump Start a Literature Review</option>
-      <option value="/update/2018-04-16-getting-started/"  selected>- Getting Started!</option>
+   Tutorials</option> 
+    <option value="/tutorials/blogdown/" >
+  - 
+   Building a Website with Blogdown</option>
+    <option value="/tutorials/add-new-file/" >
+  - 
+   Adding New Content Via Github</option>
+    <option value="/tutorials/scrapy-instagram/" >
+  - 
+   Scraping Instagram Post Metadata</option>
+    <option value="/tutorials/sqlite/" >
+  - 
+   Setting up a SQLite DB</option>
+    <option value="/tutorials/sqlite-to-r/" >
+  - 
+   Importing SQLite DB into R</option>
+    <option value="/tutorials/classify-images-with-tensorflow/" >
+  - 
+   Classify Images with Tensorflow</option> 
+    <option value="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/"  selected>
+  -- 
+   Affinity Propagation in R</option> 
   
+  
+  
+    <option value="/update/" >
+   Updates</option>
 
 
 
@@ -246,29 +268,56 @@
       </div>
     
 
-    <h1>Getting Started!</h1>
+    <h1>Affinity Propagation in R</h1>
     
     
     
-    
 
-<p>2018-04-16</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Having determined the <a href="../classify-images-with-tensorflow/">visual similarity of the vectors</a>, we first reduced the complexity of the resulting data with t-sne, a common first step when working with the output of neural networks. It is similar to principle components analysis, but better suited here because the data has a very high number of dimensions, and so better preserves the patterns.</p>
+<p>In this notebook, we are then taking this data and exploring it for clusters. We use the ‘Affinity propagation’ technique. From our paper (2018):</p>
+<blockquote>
+<p>Affinity propagation is a clustering algorithm that identifies exemplars among data points and forms clusters of data points around these exemplars. K-means is often used for clustering but it is sensitive to the initial random selection of exemplars, and does not necessarily select the best representation of clusters; in Frey and Duecke’s approach, all data points are considered as possible exemplars. This approach models the datapoints as a kind of network along which messages are passed recursively. From this, exemplars and clusters emerge (2007). An important difference between k-means and affinity propagation clustering is that for affinity propagation we do not need to specify the number of clusters in advance as we do for k-means</p>
+</blockquote>
+<pre class="r"><code># import the data
+library(jsonlite)
+mydata &lt;- fromJSON(&quot;image_tsne_projections.json&quot;, flatten=TRUE)</code></pre>
+<p>We can begin by taking a look at the data like so:</p>
+<pre class="r"><code>## let&#39;s see what the data looks like
+## in this example, we only loaded 25 images (demo)
+## so it&#39;s a bit artificial, but carry on.
 
-<h3 id="we-re-underway">We&rsquo;re underway!</h3>
+library(ggplot2)
+g = ggplot(mydata, aes(x = x, y = y)) + geom_point() + labs(title = &quot;T-SNE Plot of Image Similarity Vectors&quot;)
+print(g)</code></pre>
+<p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through ‘apcluster’:</p>
+<pre class="r"><code>X &lt;- cbind(mydata$x, mydata$y)
 
-<p>We received word at the end of March that this project has been funded. Since then, we&rsquo;ve been doing the administrative work to get the project up and running - figuring out how to advertise for students, how to enable those students to study at Stockholm for a term or two, setting up the public face of this project, figuring out the internals of the research accounting system.</p>
+## affinity propogation
+library(apcluster)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;apcluster&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     heatmap</code></pre>
+<pre class="r"><code>d.apclus &lt;- apcluster(negDistMat(r=2), X) 
+cat(&quot;affinity propogation optimal number of clusters:&quot;, length(d.apclus@clusters), &quot;\n&quot;)</code></pre>
+<pre><code>## affinity propogation optimal number of clusters: 4</code></pre>
+<p>Finally, we can plot these clusters:</p>
+<pre class="r"><code>plot(d.apclus, X)</code></pre>
+<p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
 
-<p>We also took advantage of the experience of writing this proposal to run a small experiment in using Tensorflow on our previous corpus (<a href="http://intarch.ac.uk/journal/issue45/5/index.html">Huffer &amp; Graham 2017</a>) of Instagram materials. We wrote that up for the <a href="https://journal.caa-international.org/">Journal of Computer Applications in Archaeology</a> and submitted it around the same time as we submitted the proposal. This was accepted with revisions, and is now in the pipeline. We hope to see it come out shortly. That paper was also the <a href="https://shawngraham.github.io/presentations/saa2018.html#/">nucleus for a paper</a> at the Society for American Archaeology conference this April in Washington DC. We also presented a related paper, drawing on Damien&rsquo;s postdoctoral work- Huffer and Graham, Bioarchaeological Approaches to Investigating Supply, Demand and Authenticity in the Colonial-era Human Remains Trade.</p>
-
-<p>I guess this all means: we&rsquo;re hitting the ground running!</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" title="Using Etudier to Jump Start a Literature Review"> <i class="fa fa-chevron-left"></i><label>Using Etudier to Jump Start a Literature Review</label></a>
-    <a class="nav nav-next" href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" title="Using Etudier to Jump Start a Literature Review" style="margin-right: 0px;"><label>Using Etudier to Jump Start a Literature Review</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/tutorials/classify-images-with-tensorflow/" title="Classify Images with Tensorflow"> <i class="fa fa-chevron-left"></i><label>Classify Images with Tensorflow</label></a>
+    <a class="nav nav-next" href="/update/" title="Updates" style="margin-right: 0px;"><label>Updates</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -282,13 +331,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 16/04/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="https://github.com/bonetrade/bonetrade.github.io/update/2018-04-16-getting-started.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/bonetrade/bonetrade.github.io/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index.html" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

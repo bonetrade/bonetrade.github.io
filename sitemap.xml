@@ -3,15 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/code/classify-images-with-tensorflow/</loc>
-  </url>
-  
-  <url>
     <loc>/scope/</loc>
   </url>
   
   <url>
-    <loc>/code/affinity-propagation-in-r/</loc>
+    <loc>/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/</loc>
   </url>
   
   <url>
@@ -25,10 +21,6 @@
   <url>
     <loc>/tutorials/add-new-file/</loc>
     <lastmod>2018-04-30T11:30:45-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/code/</loc>
   </url>
   
   <url>
@@ -64,6 +56,10 @@
   <url>
     <loc>/tutorials/sqlite-to-r/</loc>
     <lastmod>2018-04-30T11:30:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tutorials/classify-images-with-tensorflow/</loc>
   </url>
   
   <url>
