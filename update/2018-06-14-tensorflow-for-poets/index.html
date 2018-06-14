@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.40.3" />
-<title>Scope :: The Bonetrade Project</title>
+<title>Tensorflow for Poets :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 <script src="https://hypothes.is/embed.js" async></script>
     
   </head>
-  <body data-url="/scope/">
+  <body data-url="/update/2018-06-14-tensorflow-for-poets/">
     
       <header>
   <div class="logo">
@@ -74,11 +74,10 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/scope/" class="dd-item parent active haschildren
+    <li data-nav-id="/scope/" class="dd-item haschildren
         ">
       <div>
-      <a href="/scope/">Scope</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/scope/">Scope</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/scope/schedule/" class="dd-item
@@ -177,13 +176,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/update/" class="dd-item haschildren
+    <li data-nav-id="/update/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/update/">Updates</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      <a href="/update/">Updates</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/update/2018-06-14-tensorflow-for-poets/" class="dd-item">
+      <li data-nav-id="/update/2018-06-14-tensorflow-for-poets/" class="dd-item active">
         <div>
           <a href="/update/2018-06-14-tensorflow-for-poets/">
             Tensorflow for Poets
@@ -226,30 +226,18 @@
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/scope/"  selected>
-   Scope</option> 
-    <option value="/scope/schedule/" >
-  - 
-   Schedule</option>
-    <option value="/scope/bibliography/" >
-  - 
-   Bibliography</option>
-    <option value="/scope/outputs/" >
-  - 
-   Expectations for What We&#39;ll Learn</option>
-    <option value="/scope/graduate-opportunities/" >
-  - 
-   Graduate Opportunities</option>
-    <option value="/scope/end-of-project/" >
-  - 
-   When This Project Ends</option>
-  
+    <option value="/scope/" >
+   Scope</option>
     <option value="/papers/" >
    Papers and Publications</option>
     <option value="/tutorials/" >
    Tutorials</option>
     <option value="/update/" >
-   Updates</option>
+   Updates</option> 
+      <option value="/update/2018-06-14-tensorflow-for-poets/"  selected>- Tensorflow for Poets</option>
+      <option value="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" >- Using Etudier to Jump Start a Literature Review</option>
+      <option value="/update/2018-04-16-getting-started/" >- Getting Started!</option>
+  
 
 
 
@@ -272,47 +260,68 @@
       </div>
     
 
-    <h1>Scope</h1>
+    <h1>Tensorflow for Poets</h1>
     
     
     
+    <p>2018-06-14</p>
 
+<p>In our recent paper, <a href="https://journal.caa-international.org/articles/10.5334/jcaa.8/">&lsquo;Fleshing Out the Bones&rsquo;</a> we used the trained &lsquo;Inception 3&rsquo; model as a way of determining clusters of images that we then studied for clues and hints: <em>why</em> did the machine cluster them this way? What are the common features?</p>
 
+<p>Unsupervised learning: It&rsquo;s not unlike reading entrails.</p>
 
-<p>We began mapping out the territory of this trade in 2016. We collected thousands of posts and studied the language of the posts - how the collectors and enthusiasts described their engagement with the remains. At that time, we studied only one platform. Our methods were primarily textual.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
+<p><img src="/update/2018-06-14-tensorflow-for-poets_files/219px-Piacenza_Bronzeleber.jpg" alt="Diagram of the sheep's liver found near Piacenza with Etruscan inscriptions on the bronze sheep's Liver of Piacenza, Wikipedia" /></p>
 
-<p>In this project, we intend to explore the leads suggested in that first study by developing and adapting approaches from machine learning, computer vision, and artificial intelligence (various neural network models) to scale up our ability to study this trade. We are looking at a number of social media platforms and marketplaces.</p>
+<p>An alternate approach is to take an existing model, and add new training data to it. Pete Warden put together a tutorial a few years ago called <a href="https://petewarden.com/2016/02/28/tensorflow-for-poets/">Tensorflow for Poets</a> that has since been formalized as a <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0">Google CodeLabs tutorial</a>. Last night I tried the tutorial out using a corpus of Roman fabrics and wares. The nuts-and-bolts of doing this are over in the <a href="/tutorials/tensorflow-for-poets">tutorials</a>.</p>
 
-<p>Building on our previous research, can we marry these insights from machine learning and computer vision, to those generated from text analysis of the posts, and social network analysis of followers? How do particular patterns of display move over the network of participants - are there fads, trends, key players? Finally, what are the ethical, moral, and legal implications of using machine learning in this way?</p>
+<p>The hardest part was getting the training data organized. It needs to be in a folder where each image is in a subfolder where the name of the subfolder is the category, eg:</p>
 
-<h2 id="our-objectives-are-therefore">Our objectives are therefore:</h2>
+<pre><code>|
+|-training-images
+  |
+  |-terrasig
+  |-african_red_slip
+  |-veranice_nera
+</code></pre>
+
+<p>&hellip;etc. Once that was done, it went quite smoothly. What will take some <em>time</em> is figuring out what the different <code>architecture</code> and other flags do. For instance, in the default command suggested by the tutorial, I had to determine that I needed to add the flag on validation size and set it to use the entire training set (as my training set is probably way too small).</p>
+
+<pre><code>python -m scripts.retrain \
+  --bottleneck_dir=tf_files/bottlenecks \
+  --how_many_training_steps=500 \
+  --model_dir=tf_files/models/ \
+  --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224 \
+  --output_graph=tf_files/retrained_graph.pb \
+  --output_labels=tf_files/retrained_labels.txt \
+  --architecture mobilenet_0.50_224 \
+  --validation_batch_size=-1 \
+  --image_dir=tf_files/gallery
+</code></pre>
+
+<blockquote>
+<p>&ldquo;The architecture flag is where we tell the retraining script which version of MobileNet we want to use. The 1.0 corresponds to the width multiplier, and can be 1.0, 0.75, 0.50 or 0.25. The 224 corresponds to image resolution, and can be 224, 192, 160 or 128. For example, to train the smallest version, you’d use &ndash;architecture mobilenet_0.25_128.&rdquo; <a href="https://hackernoon.com/creating-insanely-fast-image-classifiers-with-mobilenet-in-tensorflow-f030ce0a2991">Harvey, 2017</a></p>
+</blockquote>
+
+<p>I&rsquo;m not sure I understand exactly what this all means yet, practically speaking. Anyway, I now know what I&rsquo;ll need our MA research assistants to do this fall.</p>
 
 <ol>
-<li>To develop and share a trained neural network that can be employed by other researchers interested in this trade in particular;</li>
-<li>To develop the computational and theoretical tools to allow others to adapt our approach to their own area of interest in humanities’ research;</li>
-<li>To determine the patterns in the visual rhetorics of the trade in human remains online so that this trade can be tracked across social media, monitored, and disrupted;</li>
-<li>To enable the possibility of sourcing these materials so that they may be repatriated to descendent communities;</li>
-<li>To build ethical frameworks into our computational approaches;</li>
-<li>To develop a cohort of highly trained personnel who will take this research forward into other domains.</li>
+<li>study our first corpus&rsquo; clustering results to come up with some training categories</li>
+<li>divide that corpus into a training dataset</li>
+<li>train a new image classifier</li>
+<li>run that classifier on our new corpus (which I&rsquo;m still collecting)</li>
+<li>compare that with the clustering approach without our new classifier.</li>
+<li>compare the results of both with the posts&rsquo; text</li>
 </ol>
-<div class="footnotes">
 
-<hr />
-
-<ol>
-<li id="fn:1">Huffer, D. and Graham, S. 2017 The Insta-Dead: the rhetoric of the human remains trade on Instagram, Internet Archaeology 45. <a href="https://doi.org/10.11141/ia.45.5">https://doi.org/10.11141/ia.45.5</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-</ol>
-</div>
-
+<p>The ambition? To be able to sort at scale the images we find automatically into sensible structure.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/" title="The Bonetrade: Studying the Online Trade in Human Remains"> <i class="fa fa-chevron-left"></i><label>The Bonetrade: Studying the Online Trade in Human Remains</label></a>
-    <a class="nav nav-next" href="/scope/schedule/" title="Schedule" style="margin-right: 0px;"><label>Schedule</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/update/" title="Updates"> <i class="fa fa-chevron-left"></i><label>Updates</label></a>
+    <a class="nav nav-next" href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" title="Using Etudier to Jump Start a Literature Review" style="margin-right: 0px;"><label>Using Etudier to Jump Start a Literature Review</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -326,9 +335,13 @@
     
 
   
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 14/06/2018
+    </div>
+    
 
     <div class="github-link">
-      <a href="https://github.com/bonetrade/bonetrade.github.io/Scope/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/bonetrade/bonetrade.github.io/update/2018-06-14-tensorflow-for-poets.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

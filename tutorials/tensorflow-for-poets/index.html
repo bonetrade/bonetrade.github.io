@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bonetrade Project</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Build an Image Classifier with Tensorflow :: The Bonetrade Project</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/";
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-117669422-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="https://hypothes.is/embed.js" async></script>
+    
+  </head>
+  <body data-url="/tutorials/tensorflow-for-poets/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="/">The Bonetrade Project</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/bonetrade"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/info-sheet.pdf"  rel="noopener">
+                  <i class='fa fa-cloud-download'></i> <label>Download Info Sheet</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/scope"  rel="noopener">
+                  <i class='fa fa-info-circle'></i> <label>Scope</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/scope/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/scope/">Scope</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/scope/schedule/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/schedule/">Schedule</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/bibliography/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/bibliography/">Bibliography</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/outputs/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/outputs/">Expectations for What We&#39;ll Learn</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/graduate-opportunities/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/graduate-opportunities/">Graduate Opportunities</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/scope/end-of-project/" class="dd-item
+        ">
+      <div>
+      <a href="/scope/end-of-project/">When This Project Ends</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/papers/" class="dd-item
+        ">
+      <div>
+      <a href="/papers/">Papers and Publications</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/tutorials/">Tutorials</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/tutorials/blogdown/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/blogdown/">Building a Website with Blogdown</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/add-new-file/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/add-new-file/">Adding New Content Via Github</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/scrapy-instagram/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/scrapy-instagram/">Scraping Instagram Post Metadata</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/sqlite/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/sqlite/">Setting up a SQLite DB</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/sqlite-to-r/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/sqlite-to-r/">Importing SQLite DB into R</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/tutorials/classify-images-with-tensorflow/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/tutorials/classify-images-with-tensorflow/">Cluster Images with Tensorflow</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" class="dd-item
+        ">
+      <div>
+      <a href="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/">Affinity Propagation in R</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/tutorials/tensorflow-for-poets/" class="dd-item parent active
+        ">
+      <div>
+      <a href="/tutorials/tensorflow-for-poets/">Build an Image Classifier with Tensorflow</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/update/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/update/">Updates</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/update/2018-06-14-tensorflow-for-poets/" class="dd-item">
+        <div>
+          <a href="/update/2018-06-14-tensorflow-for-poets/">
+            Tensorflow for Poets
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/" class="dd-item">
+        <div>
+          <a href="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/">
+            Using Etudier to Jump Start a Literature Review
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/update/2018-04-16-getting-started/" class="dd-item">
+        <div>
+          <a href="/update/2018-04-16-getting-started/">
+            Getting Started!
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<p>Shawn Graham, Carleton University <br> Damien Huffer, Stockholm University <br><img src="/carleton-logo.png"><img src="/stockholm-logo.gif"> </p>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/scope/" >
+   Scope</option>
+    <option value="/papers/" >
+   Papers and Publications</option>
+    <option value="/tutorials/" >
+   Tutorials</option> 
+    <option value="/tutorials/blogdown/" >
+  - 
+   Building a Website with Blogdown</option>
+    <option value="/tutorials/add-new-file/" >
+  - 
+   Adding New Content Via Github</option>
+    <option value="/tutorials/scrapy-instagram/" >
+  - 
+   Scraping Instagram Post Metadata</option>
+    <option value="/tutorials/sqlite/" >
+  - 
+   Setting up a SQLite DB</option>
+    <option value="/tutorials/sqlite-to-r/" >
+  - 
+   Importing SQLite DB into R</option>
+    <option value="/tutorials/classify-images-with-tensorflow/" >
+  - 
+   Cluster Images with Tensorflow</option>
+    <option value="/tutorials/tensorflow-for-poets/"  selected>
+  - 
+   Build an Image Classifier with Tensorflow</option> 
+  
+  
+    <option value="/update/" >
+   Updates</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Build an Image Classifier with Tensorflow</h1>
+    
+    
+    
+
+
+
+<p>To build an image classifier, we will follow the <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0">Tensorflow for Poets tutorial</a>. While the tutorial is more or less straightforward, there are still some hidden gotchas.</p>
+
+<h2 id="get-some-data">Get some data</h2>
+
+<p>But first, we need to have data arranged into labelled categories, like so (imagining we were working with Roman fabrics and wares):</p>
+
+<pre><code>|
+|-training-images
+  |
+  |-terrasig
+  |-african_red_slip
+  |-veranice_nera
+</code></pre>
+
+<p>etc. <a href="http://potsherd.net/">Potsherd.net</a> has a lot of this information, and it&rsquo;s well organized. For this tutorial, we&rsquo;ll use that data as our own data is not yet ready for this stage.</p>
+
+<p>The first thing to do is to write a scraper to grab the images and put them in sensible folders.</p>
+
+<p><a href="https://scrapy.org/">Scrapy</a> can do this. But I haven&rsquo;t really learned how to use Scrapy from scratch yet - it&rsquo;s one thing to repurpose or <a href="scrapy-instagram">use code that someone else has developed</a>, quite another to write <em>ex novo</em>. The <a href="https://programminghistorian.org/">Programming Historian</a> has an excellent piece by <a href="https://programminghistorian.org/en/lessons/intro-to-beautiful-soup">Jeri Wieringa on using &lsquo;Beautiful Soup&rsquo;</a> to parse a webpage - we&rsquo;ll use that in conjunction with <a href="https://programminghistorian.org/en/lessons/applied-archival-downloading-with-wget">wget</a> to get the information we want.</p>
+
+<h2 id="potbot-py">Potbot.py</h2>
+
+<p>Open a text editor and start a new file. First thing we&rsquo;ll do is <code>import</code> some modules that make life easier:</p>
+
+<pre><code>from bs4 import BeautifulSoup
+import csv
+import requests
+
+r = requests.get('http://potsherd.net/atlas/Ware/')
+soup = BeautifulSoup(r.content, &quot;html.parser&quot;)
+</code></pre>
+
+<p>We create a variable <code>r</code> that tells python we want it to go out onto the web and retrieve the html at that location; we then tell python to pass the html to BeautifulSoup for processing. Next, we tell the program to create a new csv file for us to use as our output container:</p>
+
+<pre><code>f = csv.writer(open(&quot;output.csv&quot;, &quot;w&quot;))
+f.writerow([&quot;Domain&quot;, &quot;Path&quot;])    # Write column headers as the first line
+</code></pre>
+
+<p>Then comes the magic. We tell python, via BeautifulSoup, to look in the html for a table (having studied the html of our target site, we know that the links to the individual ware pages are organized using html table tags) and then grab the information contained in the <code>a</code> tags.</p>
+
+<pre><code>trs = soup.find_all('tr')
+
+for tr in trs:
+    for link in tr.find_all('a'):
+        fulllink = link.get ('href')
+        print (fulllink) #print in terminal to verify results
+        f.writerow([&quot;http://potsherd.net/atlas/&quot;, fulllink])    # Write column headers as the first line
+</code></pre>
+
+<p>et voila. Save all that as a <code>.py</code> file, and from the terminal, run it:</p>
+
+<p><code>$ python potbot.py</code></p>
+
+<p>A new file &lsquo;output.csv&rsquo; is created with two columns. The first column contains <code>http://potsherd.net/atlas/</code> and the second column contains the rest of the paths we want. Delete all <code>,</code> and delete the header row; save as <code>urls.txt</code> and we can then use wget like so:</p>
+
+<p><code>wget -r -w 2 --limit-rate=20k -A jpeg,jpg,bmp,gif,png -i urls.txt</code></p>
+
+<p>This command tells wget to follow the paths in the input file <code>urls.txt</code>, to wait a moment between requests, to limit the amount asked for each time, and to only keep images. Go get a coffee, come back later, and you&rsquo;ll have a lovely directory of data.</p>
+
+<p><img src="directorydownload.png" alt="directory showing downloaded data" /></p>
+
+<h2 id="the-tensorflow-bit">The Tensorflow bit</h2>
+
+<p>Set up a virtual environment first - that is to say, a special arrangement where you are using python and installing bits and pieces <em>just for this tutorial</em>, just to this particular version of python. <a href="https://realpython.com/python-virtual-environments-a-primer/">Here is a primer on how to do this</a>. If you don&rsquo;t use a virtual environment, you probably won&rsquo;t notice any problems - at first. But as you do more and more code work, you&rsquo;ll start encountering conflicts and weird errors as various packages are installed and fight with each other.</p>
+
+<p>My virtualenv uses python 3.6.1.</p>
+
+<p>Get tensorflow:</p>
+
+<pre><code>$ pip install --upgrade &quot;tensorflow==1.7.*&quot;
+</code></pre>
+
+<p>Get the Tensorflow for poets codebase:</p>
+
+<pre><code>$ git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
+
+$ cd tensorflow-for-poets-2
+</code></pre>
+
+<p>Look at that directory in your finder. There&rsquo;s a folder called <code>tf_files</code>. Copy the data you want to use as training data into that folder; if you&rsquo;re using the pottery data from above, copy the <code>gallery</code> folder so that you now have <code>tf_files/gallery</code>. (nb make sure you have the <em>right</em> gallery folder - potsherd.net has <em>two</em> folders in slightly different places called gallery. One has image data arranged by ware; one doesn&rsquo;t.)</p>
+
+<p>The tutorial now wants you to set some environment variables, and to launch a process to monitor everything. You don&rsquo;t need to do this. If you do decide to launch the process, eg,</p>
+
+<pre><code>$ tensorboard --logdir tf_files/training_summaries &amp;
+</code></pre>
+
+<p>&hellip;you&rsquo;ll need to open a new tab in your terminal and activate your virtual environment again (eg., <code>$source env/bin/activate</code>) to carry on. Having this monitoring process running also lets you use a browser-based tool at <a href="http://0.0.0.0:6006/">http://0.0.0.0:6006/</a> to do some other high-level tensor things, but these aren&rsquo;t necessary for our purposes today.</p>
+
+<p>Moving on - it&rsquo;s time to retrain the model! The command, in the tutorial, looks like this:</p>
+
+<pre><code>python -m scripts.retrain \
+  --bottleneck_dir=tf_files/bottlenecks \
+  --how_many_training_steps=500 \
+  --model_dir=tf_files/models/ \
+  --summaries_dir=tf_files/training_summaries/&quot;${ARCHITECTURE}&quot; \
+  --output_graph=tf_files/retrained_graph.pb \
+  --output_labels=tf_files/retrained_labels.txt \
+  --architecture=&quot;${ARCHITECTURE}&quot; \
+  --image_dir=tf_files/flower_photos
+</code></pre>
+
+<p>See that <code>${ARCHITECTURE]}</code> bit? That can be set using an environment variable. For our purposes, for the time being, we can just put the various possibilities in ourselves. I found <a href="https://hackernoon.com/creating-insanely-fast-image-classifiers-with-mobilenet-in-tensorflow-f030ce0a2991">this website</a> useful in that regard. Because our pottery training data - though copious - is still not enough (fewer than 10000 images), we have to add another flag to our command, concerning validation batch size. Otherwise we&rsquo;ll get an error message. Note also that we&rsquo;re only training for 500 steps; more steps will generally get better results (but diminishing returns also apply).</p>
+
+<p>Our command then:</p>
+
+<pre><code>python -m scripts.retrain \
+  --bottleneck_dir=tf_files/bottlenecks \
+  --how_many_training_steps=500 \
+  --model_dir=tf_files/models/ \
+  --summaries_dir=tf_files/training_summaries/mobilenet_0.50_224 \
+  --output_graph=tf_files/retrained_graph.pb \
+  --output_labels=tf_files/retrained_labels.txt \
+  --architecture mobilenet_0.50_224 \
+  --validation_batch_size=-1 \
+  --image_dir=tf_files/gallery
+</code></pre>
+
+<p>This will run for a while. Elements to explore: different mobilenet architectures, increasing iterations, more data. Once it&rsquo;s finished training, let&rsquo;s test it:</p>
+
+<pre><code>python -m scripts.label_image \
+    --graph=tf_files/retrained_graph.pb  \
+    --image=tf_files/gallery/B4/B4-1-f.jpg
+</code></pre>
+
+<p>So we&rsquo;re testing it on one of the images we trained it with. Our result:</p>
+
+<pre><code>Evaluation time (1-image): 0.265s
+
+b4 (score=0.96954)
+c189 (score=0.00678)
+dr2 4 (score=0.00401)
+oxrs (score=0.00397)
+gaul (score=0.00185)
+</code></pre>
+
+<p>Try a different image:</p>
+
+<pre><code>python -m scripts.label_image \
+    --graph=tf_files/retrained_graph.pb  \
+    --image=tf_files/gallery/SEGL/SEGL-ext1-part-1.jpg
+</code></pre>
+
+<p>Another very high result. But the proof is in the pudding- what kind of results do we get on new, never-seen-before images? A quick google search for SEGL brought up this article: <a href="https://phys.org/news/2017-06-rare-archaeological-unique-pottery-south.html">https://phys.org/news/2017-06-rare-archaeological-unique-pottery-south.html</a> which has an image of some pottery that, per the article, is SEGL. Right-click, save-as. I put it in a new folder, <code>tf_files/testing</code>.</p>
+
+<pre><code>python -m scripts.label_image \
+    --graph=tf_files/retrained_graph.pb  \
+    --image=tf_files/testing/rarearchaeol.jpg
+</code></pre>
+
+<p>Result:</p>
+
+<pre><code>Evaluation time (1-image): 0.268s
+
+oxrs (score=0.53120)
+hars (score=0.07437)
+c189 (score=0.06991)
+como (score=0.04226)
+vrw (score=0.03977)
+</code></pre>
+
+<p>So&hellip; it doesn&rsquo;t agree with the article, but it&rsquo;s not very sure itself. This is a function of not enough training data I suspect (one could interpret it as the people in the article being wrong about the attribution of the pottery, and of course, that raises the interesting philosophical condundrum of whether the machine is a ware lumper or a splitter).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we&rsquo;ve learned how to scrape a website for data, and to build an image classifier from that data. Much fine tuning and better data are required to build something where the results will be meaningful and useful. It should be apparent to the reader that much depends on just how the parameters are tuned, and the kind, quality, and quantity of training images used.</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/" title="Affinity Propagation in R"> <i class="fa fa-chevron-left"></i><label>Affinity Propagation in R</label></a>
+    <a class="nav nav-next" href="/update/" title="Updates" style="margin-right: 0px;"><label>Updates</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 30/04/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/bonetrade/bonetrade.github.io/tutorials/tensorflow-for-poets/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
+
+<p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

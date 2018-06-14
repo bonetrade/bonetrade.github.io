@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Tensorflow for Poets</title>
+      <link>/update/2018-06-14-tensorflow-for-poets/</link>
+      <pubDate>Thu, 14 Jun 2018 08:35:47 -0400</pubDate>
+      
+      <guid>/update/2018-06-14-tensorflow-for-poets/</guid>
+      <description>2018-06-14
+In our recent paper, &amp;lsquo;Fleshing Out the Bones&amp;rsquo; we used the trained &amp;lsquo;Inception 3&amp;rsquo; model as a way of determining clusters of images that we then studied for clues and hints: why did the machine cluster them this way? What are the common features?
+Unsupervised learning: It&amp;rsquo;s not unlike reading entrails.
+An alternate approach is to take an existing model, and add new training data to it. Pete Warden put together a tutorial a few years ago called Tensorflow for Poets that has since been formalized as a Google CodeLabs tutorial.</description>
+    </item>
+    
+    <item>
       <title>Using Etudier to Jump Start a Literature Review</title>
       <link>/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</link>
       <pubDate>Mon, 30 Apr 2018 11:30:45 -0400</pubDate>
