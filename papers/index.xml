@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Papers and Publications on The Bonetrade Project</title>
-    <link>/papers/</link>
+    <link>https://bonetrade.github.io/papers/</link>
     <description>Recent content in Papers and Publications on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Apr 2017 18:36:24 +0200</lastBuildDate>
     
-	<atom:link href="/papers/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bonetrade.github.io/papers/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Slides: Cultural Property Crime Seminar</title>
-      <link>/papers/cultpropcrime-06-18/</link>
+      <link>https://bonetrade.github.io/papers/cultpropcrime-06-18/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>/papers/cultpropcrime-06-18/</guid>
+      <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
       <description>fleshing out the bones
 understanding the human remains trade
 with computer vision    Shawn Graham &amp;amp; Damien Huffer
