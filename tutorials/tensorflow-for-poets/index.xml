@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Build an Image Classifier with Tensorflow on The Bonetrade Project</title>
-    <link>https://bonetrade.github.io/tutorials/tensorflow-for-poets/</link>
+    <link>/tutorials/tensorflow-for-poets/</link>
     <description>Recent content in Build an Image Classifier with Tensorflow on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Apr 2018 11:30:45 -0400</lastBuildDate>
     
-	<atom:link href="https://bonetrade.github.io/tutorials/tensorflow-for-poets/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tutorials/tensorflow-for-poets/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

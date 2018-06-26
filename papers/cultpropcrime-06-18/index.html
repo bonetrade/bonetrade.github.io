@@ -1,5 +1,4 @@
-	<head><meta charset="utf-8"></head>
-
+	<head><meta charset="utf-8">	</head>
 	<link rel="stylesheet" href="/revealjs/css/reveal.css">
 	<link rel="stylesheet" href="/revealjs/css/theme/night.css" id="theme">
 	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
@@ -275,6 +274,13 @@ for technical details, see our paper in &lt;br&gt; The Journal of Computer Appli
 	</section>
 	</div>
 	</div>
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? "\/revealjs\/css\/print\/pdf.css" : "\/revealjs\/css\/print\/paper.css";
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
 	<script src="/revealjs/lib/js/head.min.js"></script>
 	<script src="/revealjs/js/reveal.js"></script>
 	<script>
