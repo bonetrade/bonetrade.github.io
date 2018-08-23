@@ -336,8 +336,10 @@
 <li>weird errors about casting into array eg <a href="https://github.com/carpedm20/DCGAN-tensorflow/issues/162:">https://github.com/carpedm20/DCGAN-tensorflow/issues/162:</a> <code>ValueError: could not broadcast input array from shape (128,128,3) into shape (128,128)</code> means that we have to use Imagemagick&rsquo;s &lsquo;<a href="https://imagemagick.org/script/convert.php">convert</a>&rsquo; command there too.</li>
 <li>greyscale images screw things up. Convert those to RGB as well</li>
 <li>running the code: use the dockerized version, and put the data inside the DATA folder.</li>
-<li>running the code: <code>python main.py --dataset=skulls --data_dir data --train --crop</code> The &ndash;crop always has to be there.</li>
+<li>running the <code>main.py</code> script:  <code>--crop</code> always has to be appended.</li>
 </ul>
+
+<p>Command snippets:</p>
 
 <pre><code>convert image1.jpg -colorspace sRGB -type truecolor image1.jpg
 </code></pre>
@@ -357,9 +359,16 @@
 <pre><code>mogrify -colorspace sRGB  *.jpg
 </code></pre>
 
+<p>run main.py</p>
+
+<pre><code>python main.py --dataset=skulls --data_dir data --train --crop`
+</code></pre>
+
 <h3 id="results">Results?</h3>
 
-<p>I let the code run until it reached the end of its default iteration time (which is a function of the size of your images). Results were&hellip; unimpressive. With too small a dataset, the code would simply not run. With my 2300 images, I <em>did</em> get things that <em>hint</em> at something better&hellip;</p>
+<p>I let the code run until it reached the end of its default iteration time (which is a function of the size of your images). Results were&hellip; unimpressive. With too small a dataset, the code would simply not run.</p>
+
+<p>Some outputs:</p>
 
 <p><img src="https://pbs.twimg.com/media/DjThnJEXoAEYk80.jpg" alt="after two epochs" /></p>
 
@@ -373,7 +382,9 @@
 
 <p>Maybe I&rsquo;m only seeing what I <em>want</em> to see, but I see hints of the orbital bones around the eyes, the bridge of the nose, in the top left side of each test image in the mosaic.</p>
 
-<p>So. I think this approach could prove productive, but I need a) more computing power and b) more images. I wonder if I can remove my decision making process in the creation of the corpus from <em>this</em> process. Could I construct a pipeline that feeds the mass of images we&rsquo;ve created into a CNN, use the penultimate layer and some clustering to create various folders of similar images, and then pass the folders to the GAN to figure out what it&rsquo;s looking at, and visualize the individual neurons?</p>
+<p>So. I think this approach could prove productive, but I need a) more computing power b) more images c) run for <em>much much longer</em>.</p>
+
+<p>I wonder if I can remove my decision making process in the creation of the corpus from <em>this</em> process. Could I construct a pipeline that feeds the mass of images we&rsquo;ve created into a CNN, use the penultimate layer and some clustering to create various folders of similar images, and then pass the folders to the GAN to figure out what it&rsquo;s looking at, and visualize the individual neurons?</p>
 
 
     
