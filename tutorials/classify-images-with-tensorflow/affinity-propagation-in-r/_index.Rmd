@@ -30,6 +30,7 @@ g = ggplot(mydata, aes(x = x, y = y)) + geom_point() + labs(title = "T-SNE Plot 
 print(g)
 ```
 
+![](unnamed-chunk-2-1.png)
 To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through 'apcluster':
 ```{r}
 X <- cbind(mydata$x, mydata$y)
@@ -48,4 +49,4 @@ plot(d.apclus, X)
 
 ```
 
-
+![](unnamed-chunk-4-1.png)

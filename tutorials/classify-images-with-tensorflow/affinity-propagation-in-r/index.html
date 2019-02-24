@@ -80,36 +80,6 @@
       <a href="/scope/">Scope</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/scope/schedule/" class="dd-item
-        ">
-      <div>
-      <a href="/scope/schedule/">Schedule</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/scope/bibliography/" class="dd-item
-        ">
-      <div>
-      <a href="/scope/bibliography/">Bibliography</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/scope/outputs/" class="dd-item
-        ">
-      <div>
-      <a href="/scope/outputs/">Expectations for What We&#39;ll Learn</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/scope/graduate-opportunities/" class="dd-item
-        ">
-      <div>
-      <a href="/scope/graduate-opportunities/">Graduate Opportunities</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
-    <li data-nav-id="/scope/end-of-project/" class="dd-item
-        ">
-      <div>
-      <a href="/scope/end-of-project/">When This Project Ends</a><i class="fa fa-circle-thin read-icon"></i>
-      </div>
-    </li>
         </ul>
     </li>
     <li data-nav-id="/papers/" class="dd-item haschildren
@@ -338,7 +308,7 @@ library(ggplot2)
 g = ggplot(mydata, aes(x = x, y = y)) + geom_point() + labs(title = &quot;T-SNE Plot of Image Similarity Vectors&quot;)
 print(g)</code></pre>
 <p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through ‘apcluster’:</p>
+<p><img src="unnamed-chunk-2-1.png" /> To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through ‘apcluster’:</p>
 <pre class="r"><code>X &lt;- cbind(mydata$x, mydata$y)
 
 ## affinity propogation
@@ -354,6 +324,10 @@ cat(&quot;affinity propogation optimal number of clusters:&quot;, length(d.apclu
 <p>Finally, we can plot these clusters:</p>
 <pre class="r"><code>plot(d.apclus, X)</code></pre>
 <p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="figure">
+<img src="unnamed-chunk-4-1.png" />
+
+</div>
 </div>
 
 
