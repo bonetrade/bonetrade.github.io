@@ -6,10 +6,21 @@
     <description>Recent content in Updates on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jun 2018 08:35:47 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 24 Feb 2019 11:30:45 -0400</lastBuildDate>
     
 	<atom:link href="/update/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning Curve</title>
+      <link>/update/2019-02-24-learning-curve/</link>
+      <pubDate>Sun, 24 Feb 2019 11:30:45 -0400</pubDate>
+      
+      <guid>/update/2019-02-24-learning-curve/</guid>
+      <description>2019-02-2
+It&amp;rsquo;s been steep We&amp;rsquo;ve been pretty quiet in terms of updates because, well, it&amp;rsquo;s been a helluva learning curve this year. Our other project - the Open Digital Archaeology Textbook Environment - won the AIA Award for Outstanding Work in Digital Archaeology, which was very gratifying as we could use some of what we were learning for this project to help expand that one.
+We also hosted a fantastic line up of speakers at Carleton University for the Shannon Lectures in History, on the theme of &amp;lsquo;Bad Archaeology&amp;rsquo; - all five lectures were videotaped and can be viewed at the History Department Youtube Channel.</description>
+    </item>
     
     <item>
       <title>DCGAN for Archaeologists</title>

@@ -199,6 +199,13 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
+        <div>
+          <a href="/update/2019-02-24-learning-curve/">
+            Learning Curve
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2018-07-29-dcgan-for-archaeologists/" class="dd-item">
         <div>
           <a href="/update/2018-07-29-dcgan-for-archaeologists/">
@@ -257,6 +264,7 @@
    Tutorials</option>
     <option value="/update/" >
    Updates</option> 
+      <option value="/update/2019-02-24-learning-curve/" >- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/" >- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/" >- Tensorflow for Poets</option>
       <option value="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/"  selected>- Using Etudier to Jump Start a Literature Review</option>
@@ -298,7 +306,7 @@
 
 <p>But we can certainly jump start the process. One way we can do that is by pulling from one of the largest bibliographic databases readily to hand - Google Scholar. G-Scholar was built by ingesting several existing databases and is maintained by whatever magic Google uses to index journal websites and so on. We can search this database not only how we might search with the regular Google search page, but also via the citation graph. We can give it a reference, and search not only what <em>that</em> paper cites, but also the papers that cited it in turn. What&rsquo;s more, we can automate this process.</p>
 
-<p><img src="https://raw.githubusercontent.com/edsu/etudier/master/example/output.png" alt="Etudier" /></p>
+<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier-edsu.jpg" alt="Etudier" /></p>
 
 <p>Ed Summers has created a python package called &lsquo;<a href="https://github.com/edsu/etudier">Etudier</a>&rsquo; which handles this for us. It mimics a user paging through search results. By default it only looks at the first ten citations for a page or a search result, and then the top 10 for each of those, thus 100 results. That might be enough to get going. But by fiddling with the <code>--pages</code> and <code>--depth</code> flags, you can collect much much more. <code>pages</code> will search through x number of pages of results, while <code>depth</code> will delve that far into each result&rsquo;s citations.</p>
 
