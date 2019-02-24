@@ -1,0 +1,307 @@
+	<head><meta charset="utf-8">	</head>
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/night.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	&lt;section data-background=&#34;nonsap-visuals-511403-unsplash.jpg&#34;&gt;
+
+&lt;table style=&#34;width:100%&#34;&gt;
+  &lt;tr&gt;
+  &lt;td align=&#34;right&#34;&gt;
+  &lt;h3 style=&#34;color:#ffffff&#34;&gt;What Am I Looking At?&lt;/h3&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;h4&gt;Computer Vision,&lt;br&gt; Digital Phrenology,&lt;Br&gt; and the Trade in Human Remains&lt;/h4&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  
+  &lt;p align=&#34;right&#34; style=&#34;color:#ffffff&#34;&gt; &lt;small&gt; Shawn Graham&lt;br&gt; @electricarchaeo &lt;br&gt; follow along at j.mp/sg-dh-ut2019
+  &lt;/p&gt;
+
+---
+
+&lt;section data-background=&#34;/papers/cultpropcrime-06-18/museum-interior.png&#34;&gt;
+
+Note:
+- late 19th century &amp; scientific racism
+- human zoos &amp; the human cost
+
+---
+
+### Abraham Ulrikab
+![](/papers/cultpropcrime-06-18/family.png)
+
+Note:
+- Abraham Ulrikab
+- Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp; Berlin. Process of repatriation has begun
+
+---
+
+### How many other Abrahams are out there?
+
+![](/papers/cultpropcrime-06-18/mosaic.jpg)
+
+Note:
+- every skull, every femur being traded was once a person. This trade dehumanizes, fetishizes, &#39;others&#39;, these people. Digital colonialism, revisits violence
+
+---
+
+### Our project:
+- seeks to map this trade
+- uses tools of digital humanities to understand both text and visual materials
+
+---
+
+when people want to buy bones, where do they go?
+
+when people want to sell bones, where do they go?
+
+Note:
+
+given that much of this trade is morally dubious and legally in various grey zones
+
+_how_ do they negotiate this sale?
+
+
+---
+
+&gt; &lt;small&gt;&#39;I have a pile of teeny human skull scraps laying around. Due to etsys rules i cannot sell human bone or make a listing but id love to do custom orders for anyone interested in a pendant, ring, etc made from a human skull fragment. Dm me! #bone #bones #skull #humanbone #humanskull #fragment #skullfragment #oddities #oddity.&#39;
+https://www.instagram.com/p/znHyR7AbXS/
+
+![](/papers/cultpropcrime-06-18/skull-for-sale.jpg)
+
+Note:
+Not everyone is as bold as this. Most are aware that their _posts_ can be searched (ie key-word searching), and so rely on more subtle cues
+
+On Instagram alone _where dollar values were named_
+
+&#43; total amounted to approximately $190,000
+
+&#43; the value of private sales cannot of course be known
+
+&#43; Cultural impact: no.s of followers, following of _just those accounts that name a price_
+
+&#43; a network with 138,014 individuals connected by 172,208 links
+
+association with taxidermy, tattoo parlours - do i still have that cardiff photo?
+three broad groupings: specialists explicitly interested in bones; generalists who follow the bones but also other things; and people who don&#39;t post pictures themselves but follow the bone accounts
+
+---
+
+![](/papers/cultpropcrime-06-18/screenshot-belgian-video.png)
+
+Note:
+video of man in Belgium degreasing a skull. Likely source for such a skull? WW1 battlefield. He&#39;s preparing it for cutting into an exploded view.
+
+desecration of ww2 battleship wrecks - steel is pre 1945, so different atomic signature thus valuable; bones collected, given to the boss... what happens to them?
+
+How do we deal with it?
+
+Part of the problem is that not all of this is _illegal_. approaches and issues are of a part with broader trade in antiquities. Also: human remains are not property under common law!
+
+broader trade tends to focus on the auction houses and the big collectors; smaller objects, ebay, etc do not attract as much attention
+
+but the techniques developed to deal with these smaller items could be of significance for studying the broader trade, and the penetration of archaeological consciousness into the broader publics
+
+---
+
+## digital archaeology
+### meets
+## digital humanities
+
+Note:
+
+digital humanities approaches to data mining try to understand the contextual significance of what has been extracted
+
+in our work, we have in the first instance scraped ~ 13 000 posts from one calendar year on Instagram (one of many places where human remains are traded); some posts were caught in the trawl as far back as 2013
+
+we focussed on the _language_ the posts, building topic models and word vectors to understand some of the rhetorical constructions of buying and selling human Remains
+
+---
+
+![](/papers/cultpropcrime-06-18/vectors.png)
+
+Note:
+Exploring the vector space defined by binary pairs, &#39;good&#39;-&#39;bad&#39;, &#39;for sale&#39;-&#39;not for sale’. Hints of various dynamics at play can be viewed in contrasting, but related, terms, e.g. as with ‘acrylic painting’ falling in negative space and ‘skull decor’ falling in positive space. This might be a glimpse into the taste or aesthetic of those who create skull-related art, which may be important for understanding what creates the taste and demand for human remains themselves.
+
+literal posts, &#39;human skulls for sale&#39; do exist; but often the language is coded, more oblique, and seems to depend on the composition of the image itself to signal something for sale
+
+---
+
+## so that&#39;s what we&#39;ve done
+
+### here&#39;s where computer vision comes into it
+
+Note:
+our current research is looking at the composition of the images themselves, computationally. There are too many images to do the classificatory work ourselves. Some approaches to these kind of image classification or determinations of similarity employ &#39;human&#39; computers like the Amazon Mechanical Turk service. There are serious ethical issues with employing that kind of labour on this material.
+
+---
+
+
+![](/papers/cultpropcrime-06-18/machine-visions-feature-matrix.png)
+- Yannick Asogba, &#39;[Machine Visions](http://clome.info/work/machine-visions/)&#39;
+
+---
+
+![](/papers/cultpropcrime-06-18/machine-visions-neural-network.png)
+- Yannick Asogba, &#39;[Machine Visions](http://clome.info/work/machine-visions/)&#39;
+
+---
+
+![](/papers/cultpropcrime-06-18/direct.gif)
+- Tanz &amp; Carter [2017](https://techcrunch.com/2017/04/13/neural-networks-made-easy/)
+
+---
+![](skulls-feb-23-in-pix-plot.png)
+&lt;small&gt; 10k images tagged with &#39;skulls for sale&#39; and similar, collected Feb 2019, visualized with Pix-Plot, Yale DH lab, [code repo](https://github.com/YaleDHLab/pix-plot) &lt;/small&gt;
+
+Note:
+if however we stop the process just before the image labelling, we can use the vector representations of our images to compute similarities (the full details will be in our forthcoming JCAA paper). We are completely indebted to Douglas Duhaime and colleagues for clearly explicating and coding how this can be done.
+
+---
+
+### Training Our Own Classifier
+
+![](/papers/cultpropcrime-06-18/image-classifier.jpg)
+
+[Build Your Own Classifier Tutorial](https://bonetrade.github.io/tutorials/tensorflow-for-poets/)
+
+---
+
+### What the machine sees
+
+![](fig3-huffer-wood-graham-skulls-dcgan.jpg)
+
+---
+
+### Ethically Troubling
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;![](/papers/cultpropcrime-06-18/faceall1.png)&lt;/th&gt;
+    &lt;th&gt;![](/papers/cultpropcrime-06-18/faceall2.png)&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+---
+
+### Methodologically Troubling
+
+What the hell is actually going on?
+
+![](fig1-huffer-wood-graham-conch.png)
+
+Note:
+single pixels can confound the machine; even a change of aspect
+
+---
+![](fig2-huffer-wood-graham-mask.png)
+
+Note:
+and yet, people are building these things to assess and assign value for art markets, or are using these to build forensic ID stuff
+
+---
+
+### Too Much Power?
+
+![](skulls-feb-23-in-imageplot-brightness-hue2.png)
+
+Note:
+And given that research is showing that despite the fancy layers, most CNN are responding to low level signals *anyway*, perhaps this is all overkill
+
+---
+
+&lt;section data-background=&#34;markus-spiske-1165564-unsplash.jpg&#34;&gt;
+
+Note:
+summary of the problems we see
+-The reasonable right to privacy even if social media materials are posted openly online. 
+-The potential to identify individuals from their patterns of posting.
+-The potential for CNN to be responding to extraneous other signals in the data ratherthan the ostensible subject matter.
+-The potential for our own unexamined biases to be ‘baked-in’ to the training data we select.
+-The potential for any classifier we make to be used to ‘authenticate’ or otherwise heighten the commercial value of the materials depicted.
+-The potential for the technology to replicate the sins of the past when it comes to the ethical and just treatment of the dead.
+-The potential for the technology to be harnessed by law enforcement in ways that work against social justice.
+
+
+for previous slide
+Our funders are interested in us being able to identify descendent communities for the purposes of repatriation. Can we really do this? And if we are able, our experience in building classifiers so far just points out that what we believe about the images is easy to encode: if we say these are &#39;mowhawk&#39;, they become reified as mohawk. Finding visual tropes is one thing; saying that, beneath the tropes, this skull was a member of group x, y, z is I think a dangerous line to pursue. But is the good of repatriation worth the risk?
+
+---
+
+### thank you
+
+shawn.graham@carleton.ca
+
+This research has been generously supported by the Social Sciences and Humanities Research Council of Canada
+
+### [bonetrade.github.io](http://bonetrade.github.io)
+
+
+---
+
+
+for technical details, see our paper in &lt;br&gt; The Journal of Computer Applications in Archaeology, [DOI: 10.5334/jcaa.8](https://journal.caa-international.org/articles/10.5334/jcaa.8/) 
+
+ethical discussion forthcoming in [Internet Archaeology](http://intarch.ac.uk)
+
+---
+### Image Credits
+
+- dramatization of Abraham Ulrikab - screenshot from CBC The Nature of Things, [Trapped in a Human Zoo](http://www.cbc.ca/natureofthings/episodes/trapped-in-a-human-zoo)
+- screenshot of museum exhibiting skeletons - screenshot from CBC The Nature of Things, [Trapped in a Human Zoo](http://www.cbc.ca/natureofthings/episodes/trapped-in-a-human-zoo)
+- Tanz&amp; Carter, GumGum [Neural Networks Made Easy](https://techcrunch.com/2017/04/13/neural-networks-made-easy/)
+- Markus Spiske [unsplash](https://unsplash.com/photos/Cf5kL7vcF6U)
+
+---
+### Credits for Code &amp; Demos &amp; Screenshots 
+
+- Identifying Similar Images with Tensorflow [Douglas Duhaime](http://douglasduhaime.com/posts/identifying-similar-images-with-tensorflow.html)
+- Pix-Plot [Yale DH Lab](https://github.com/YaleDHLab/pix-plot)
+- Imageplot [Software Studies Initiative](http://lab.softwarestudies.com/p/imageplot.html)
+- wordVectors [Ben Schmidt](https://github.com/bmschmidt/wordVectors)
+
+
+	</section>
+	</div>
+	</div>
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? "\/revealjs\/css\/print\/pdf.css" : "\/revealjs\/css\/print\/paper.css";
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        "center": true ,
+		        
+		        "controls": true ,
+		        
+		        "history": true ,
+		        
+		        "progress": true ,
+		        
+		        "transition":"fade",
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>
