@@ -1,0 +1,318 @@
+	<head><meta charset="utf-8">	</head>
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/night.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+
+&lt;section data-background=&#34;joseph-chan-264837-unsplash.jpg&#34;&gt;
+
+&lt;table style=&#34;width:100%&#34;&gt;
+  &lt;tr&gt;
+  &lt;td align=&#34;right&#34;&gt;
+  &lt;h3 style=&#34;color:#ffffff&#34;&gt;teaching machines to see like archaeologists&lt;/h3&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;h4&gt;neural networks,&lt;br&gt; and the antiquities trades&lt;/h4&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+  
+  &lt;p align=&#34;right&#34; style=&#34;color:#ffffff&#34;&gt; &lt;small&gt; Shawn Graham&lt;br&gt; @electricarchaeo &lt;br&gt; follow along at bit.ly/
+  &lt;/p&gt;
+
+---
+
+## which presumes we know how _archaeologists_ see
+
+Note:
+Sara Perry https://eprints.soton.ac.uk/344699/
+
+---
+
+## narrator: 
+## we don&#39;t
+
+---
+
+&lt;section data-background=&#34;abigail-low-532799-unsplash.jpg&#34;&gt;
+
+Note:
+perry, hamilakis on vision, seeing, reification
+roopika risam on the kinds of humans our visualizations etc permit
+grounded &amp; ungrounded antiquities
+try to talk about connaisseurship
+
+pompeian wall styles
+
+human remains
+
+---
+
+## What it would be _nice_ to be able to do
+
+1. teach the machines to understand _style_
+2. teach the machines to spot the differences between a forgery &amp; something authentic
+3. send the machines out there to do the spotting at a scale and speed that we could never hope to achieve with our own fleshy fingers &amp; imperfect eyes
+
+---
+
+## ethical dangers
+1. reification of a privileged point of view of what constitutes &#39;style&#39; or &#39;material culture&#39;
+2. automated authentication to raise the price of antiquities and fuel the trade
+3. replication of the sins of scientific racism
+
+---
+
+### how neural networks beget computer vision
+
+![Alex Mordvintsev](https://media.giphy.com/media/LXRhyTjXJEUmQG1NrT/giphy.gif)
+
+[Alex Mordvintsev](https://twitter.com/zzznah/status/1118917356430995456)
+
+---
+
+## experiment #1
+### eye spy the fonseca bust
+
+---
+
+One-shot learning
+- pass an image through a neural network
+- pass a different image through an identical network
+- measure the difference between the results. The difference is the degree of similarity
+- requires much less data
+- requires careful training data
+
+Note:
+&#34;In face recognition systems, we want to be able to recognize a person’s identity by just feeding one picture of that person’s face to the system. And, in case, it fails to recognize the picture, it means that this person’s image is not stored in the system’s database.
+
+To solve this problem, we cannot use only a convolutional neural network for two reasons: 1) CNN doesn’t work on a small training set. 2) It is not convenient to retrain the model every time we add a picture of a new person to the system. However, we can use Siamese neural network for face recognition.&#34; https://towardsdatascience.com/one-shot-learning-face-recognition-using-siamese-neural-network-a13dcf739e
+
+---
+
+Training on folders of images of Roman sculpture
+
+![](training-for-one-shot.png)
+
+Pairs left to right, 1 = different, 0 = same
+
+---
+
+Q. Is the Fonseca Bust a Flavian Woman?
+
+Pics of Fonseca in one folder, pics of a flavian woman in the other
+
+---
+
+&lt;img src=&#34;fonseca-flav.png&#34; height=&#34;300&#34;/&gt;
+
+Looks pretty good! But wait...
+
+---
+
+&lt;img src=&#34;fonseca2.png&#34; height=&#34;400&#34;/&gt;
+
+---
+
+## experiment #2
+### give me some architectural ornamentation, and make it in pompeian red
+
+---
+
+generative adversarial networks
+
+![](https://cdn-images-1.medium.com/max/1600/1*-gFsbymY9oJUQJ-A3GTfeg.png)
+
+&lt;small&gt;Dev Nag, https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f &lt;/small&gt;
+
+Note:
+
+The idea is to learn what is important in an image by getting the forger to successfully create new images; the things that it makes show what the detective considered to be the signature elements.
+
+---
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Herculaneum_Wall_1.Style.jpg/440px-Herculaneum_Wall_1.Style.jpg)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Villa-Farnesina22.jpg/440px-Villa-Farnesina22.jpg)
+
+etc
+
+---
+
+&lt;img src=&#34;gan-pompeii.png&#34; height=&#34;300&#34;/&gt;
+&lt;img src=&#34;gan-pompeii2.png&#34; height=&#34;300&#34;/&gt;
+
+This _looks_ good, but the same visions persist, and it&#39;s actually just learned to reproduce the training set. It is not _composing_ new images. Training set was too small.
+
+---
+
+Much bigger sample from our bone trade research:
+
+![](figure4.png)
+
+---
+
+## experiment #3
+### is this a skull I see before me?
+
+---
+
+![](/papers/fields-02-19/skulls-feb-23-in-pix-plot.png)
+&lt;small&gt; 10k images tagged with &#39;skulls for sale&#39; and similar, collected Feb 2019, visualized with Pix-Plot, Yale DH lab, [code repo](https://github.com/YaleDHLab/pix-plot) &lt;/small&gt;
+
+
+---
+
+![](3-steps-from-highest-eigenvector.png)
+
+---
+
+![](bone-lust-eigenvector-illustration-gephi.png)
+
+---
+
+&lt;img src=&#34;bone-lust-eigenvector-illustration.png&#34; height = &#34;400&#34; /&gt;
+
+Note:
+Time stamps. Is there directionality in the influence?
+left vertex of triangle: 	Fri Feb 26 18:57:31
+next in tail: Tue Mar 11 23:19:25
+next in tail: Sat May 10 20:09:42
+last in tail: Sat Apr 12 21:40:37
+
+
+---
+
+I can do the same again with human remains. But I won&#39;t be displaying those pictures.
+
+---
+
+A toy skull:
+
+&lt;img src=&#34;/papers/fields-02-19/fig1-huffer-wood-graham-conch.png&#34; height=&#34;200&#34;/&gt;
+&lt;img src=&#34;/papers/fields-02-19/fig2-huffer-wood-graham-mask.png&#34; height=&#34;200&#34;/&gt;
+
+---
+
+![](giraffes.jpg)
+
+there. are. no. giraffes.
+
+---
+
+# So What?
+
+Note:
+teaching the machines to see works in a way that suggests greater authority than is warranted, which is dangerous.
+
+---
+
+![](https://static1.squarespace.com/static/59413d96e6f2e1c6837c7ecd/t/5a26ac8cf9619ab1f71fa62f/1512484295797/07CornerDetection.png?format=1500w)
+
+&lt;small&gt;Bailey, J. 2017 &#39;Machine learning for art valuation. An interview with Ahmed Hosny&#39;, Artnome.com, https://www.artnome.com/news/2017/12/2/machine-learning-for-art-valuation &lt;/small&gt;
+
+Note:
+
+Already, people are using neural networks to identify &#39;high value&#39; artworks so as to set reserve prices
+
+---
+
+![](https://greggormattson.files.wordpress.com/2017/09/djneyjvuwaalpir_large.jpg?w=522)
+&lt;small&gt;Hirschman, Dan. artificial intelligence discovers gayface. sigh. https://scatter.wordpress.com/2017/09/10/guest-post-artificial-intelligence-discovers-gayface-sigh/&lt;/small&gt;
+
+Note:
+Already, people are using neural networks to identify sexual orientation, or presence/absence in criminal databases
+
+---
+
+&lt;section data-background=&#34;josh-marshall-133093-unsplash.jpg&#34;&gt;
+
+Note:
+Already, the use of these techniques reifies assumptions about culture, origin, and value that dehumanize and demean the living _and the dead_.
+
+---
+
+&lt;section data-background=&#34;kyle-glenn-336141-unsplash.jpg&#34;&gt;
+
+Note:
+
+The use of this technology in the context of antiquities trading, human remains trading, forgeries is going to throw up many _edge cases_ that will require human intervention to sort out. This may improve the algorithm: but will it make it ethical?
+
+An ethical use case: taxonomic processes. Instead of authenticating, let the machines look for hints of context. Let the machines look for low-stakes features.
+
+
+---
+
+&lt;section data-background=&#34;callum-shaw-557874-unsplash.jpg&#34;&gt;
+
+Note:
+
+Leave the complex reasoning to the humans. 
+Neural networks are too easily spoofed while also carrying too much rhetorical power.
+
+---
+
+&lt;section data-background=&#34;callum-shaw-557874-unsplash.jpg&#34;&gt;
+
+&lt;h3 align=&#34;left&#34;&gt;thank you&lt;/h3&gt;
+
+&lt;p align=&#34;left&#34;&gt;shawn.graham@carleton.ca&lt;/p&gt;
+
+&lt;p align=&#34;left&#34;&gt;&lt;small&gt;This research has been generously supported by the&lt;br&gt; Social Sciences and Humanities Research Council of Canada&lt;/small&gt;
+
+&lt;h3 align=&#34;left&#34;&gt;[bonetrade.github.io](http://bonetrade.github.io) &lt;/h3&gt;
+
+---
+&lt;small&gt;full slide photo credits, unsplash.com:
+
+joseph chan
+
+josh marshall
+
+kyle glenn
+
+callum shaw
+
+abigail low
+	</section>
+	</div>
+	</div>
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? "\/revealjs\/css\/print\/pdf.css" : "\/revealjs\/css\/print\/paper.css";
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        "center": true ,
+		        
+		        "controls": true ,
+		        
+		        "history": true ,
+		        
+		        "progress": true ,
+		        
+		        "transition":"fade",
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>

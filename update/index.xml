@@ -6,10 +6,20 @@
     <description>Recent content in Updates on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Feb 2019 11:30:45 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 18 Apr 2019 11:30:45 -0400</lastBuildDate>
     
 	<atom:link href="/update/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blogdown Breakdown</title>
+      <link>/update/2019-04-18-blogdown-breakdown/</link>
+      <pubDate>Thu, 18 Apr 2019 11:30:45 -0400</pubDate>
+      
+      <guid>/update/2019-04-18-blogdown-breakdown/</guid>
+      <description>3019-04-25 A Memo To Self on A Blogdown Breakdown
+Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.</description>
+    </item>
     
     <item>
       <title>Learning Curve</title>
