@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Papers and Publications on The Bonetrade Project</title>
-    <link>/papers/</link>
+    <link>https://bonetrade.github.io/papers/</link>
     <description>Recent content in Papers and Publications on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 18:36:24 +0200</lastBuildDate>
     
-	<atom:link href="/papers/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bonetrade.github.io/papers/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Slides: Public Lecture @ York University, What the Machine Saw</title>
-      <link>/papers/york-05-29/</link>
+      <link>https://bonetrade.github.io/papers/york-05-29/</link>
       <pubDate>Wed, 29 May 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/york-05-29/</guid>
+      <guid>https://bonetrade.github.io/papers/york-05-29/</guid>
       <description>what the machine saw:
 Studying the trade in human remains
 in an era of big data    Shawn Graham
@@ -25,10 +25,10 @@ Carleton University @electricarchaeo follow along at bit.ly/sg-york Note: Would 
     
     <item>
       <title>Slides: Investigating and Policing Antiquities Trafficking and Forgery in a Digital Age</title>
-      <link>/papers/stockholm-04-25/</link>
+      <link>https://bonetrade.github.io/papers/stockholm-04-25/</link>
       <pubDate>Thu, 25 Apr 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/stockholm-04-25/</guid>
+      <guid>https://bonetrade.github.io/papers/stockholm-04-25/</guid>
       <description>teaching machines to see like archaeologists
 neural networks,
 and the antiquities trades    Shawn Graham
@@ -40,10 +40,10 @@ human remains</description>
     
     <item>
       <title>Slides: Workshop on Quantitative Analysis and the Digital Turn in Historical Studies</title>
-      <link>/papers/fields-02-19/</link>
+      <link>https://bonetrade.github.io/papers/fields-02-19/</link>
       <pubDate>Wed, 27 Feb 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/fields-02-19/</guid>
+      <guid>https://bonetrade.github.io/papers/fields-02-19/</guid>
       <description>What Am I Looking At?
 Computer Vision,
 Digital Phrenology, and the Trade in Human Remains    Shawn Graham
@@ -53,10 +53,10 @@ Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convi
     
     <item>
       <title>Slides: Cultural Property Crime Seminar</title>
-      <link>/papers/cultpropcrime-06-18/</link>
+      <link>https://bonetrade.github.io/papers/cultpropcrime-06-18/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>/papers/cultpropcrime-06-18/</guid>
+      <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
       <description>fleshing out the bones
 understanding the human remains trade
 with computer vision    Shawn Graham &amp;amp; Damien Huffer
