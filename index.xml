@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Bonetrade: Studying the Online Trade in Human Remains on The Bonetrade Project</title>
@@ -17,10 +17,7 @@
       <pubDate>Wed, 29 May 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/york-05-29/</guid>
-      <description>what the machine saw:
-Studying the trade in human remains
-in an era of big data    Shawn Graham
-Carleton University @electricarchaeo follow along at bit.ly/sg-york Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold.</description>
+      <description>Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold. Spoke with a scholar in sweden last month, lovely fellow, who just didn&amp;rsquo;t see why anyone should care about bones: they do not mean anything to him, therefore it follows that anyone feeling different is just misguided.</description>
     </item>
     
     <item>
@@ -29,13 +26,11 @@ Carleton University @electricarchaeo follow along at bit.ly/sg-york Note: Would 
       <pubDate>Thu, 25 Apr 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/stockholm-04-25/</guid>
-      <description>teaching machines to see like archaeologists
-neural networks,
-and the antiquities trades    Shawn Graham
-@electricarchaeo follow along at bit.ly/sg-apr25 which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
-narrator: we don&amp;rsquo;t Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
+      <description>which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
+ narrator: we don&amp;rsquo;t  Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
 pompeian wall styles
-human remains</description>
+human remains
+ What it would be nice to be able to do  teach the machines to understand style teach the machines to spot the differences between a forgery &amp;amp; something authentic send the machines out there to do the spotting at a scale and speed that we could never hope to achieve with our own fleshy fingers &amp;amp; imperfect eyes   ethical dangers  reification of a privileged point of view of what constitutes &amp;lsquo;style&amp;rsquo; or &amp;lsquo;material culture&amp;rsquo; automated authentication to raise the price of antiquities and fuel the trade replication of the sins of scientific racism   how neural networks beget computer vision Alex Mordvintsev</description>
     </item>
     
     <item>
@@ -45,7 +40,19 @@ human remains</description>
       
       <guid>https://bonetrade.github.io/update/2019-04-18-blogdown-breakdown/</guid>
       <description>2019-04-25 A Memo To Self on A Blogdown Breakdown
-Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.</description>
+Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.
+The command to build the site is blogdown::build_site().</description>
+    </item>
+    
+    <item>
+      <title>Skeleton Keys</title>
+      <link>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</link>
+      <pubDate>Thu, 18 Apr 2019 11:30:45 -0400</pubDate>
+      
+      <guid>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</guid>
+      <description>2019-04-25 Skeleton Keys &amp;amp; Popular Science Podcast
+Our work was referenced and discussed in a new popular science book by author Brian Switek, &amp;lsquo;Skeleton Keys: The Secret Life of Bone&amp;rsquo;. The book is discussed at https://www.popsci.com/skeleton-keys-excerpt/ . You can also listen to the &amp;lsquo;Weirdest Thing&amp;rsquo; podcast talk about our work at https://www.popsci.com/weirdest-thing-falcon-sex-instagram-bones-sleep-twitch/
+ Archaeologists such as Damien Huffer track how human remains are marketed and sold over people’s smartphones, and, with colleague Shawn Graham, he dug into the mechanics of the trade in a 2017 paper called “The Insta‑Dead: The Rhetoric of the Human Remains Trade on Instagram.</description>
     </item>
     
     <item>
@@ -54,11 +61,9 @@ Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and hi
       <pubDate>Wed, 27 Feb 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/fields-02-19/</guid>
-      <description>What Am I Looking At?
-Computer Vision,
-Digital Phrenology, and the Trade in Human Remains    Shawn Graham
-@electricarchaeo follow along at bit.ly/sg-ut2019 Note: - late 19th century &amp;amp; scientific racism - human zoos &amp;amp; the human cost
-Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe.</description>
+      <description>Note:
+ late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
+ Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
     </item>
     
     <item>
@@ -120,11 +125,9 @@ We&amp;rsquo;re underway! We received word at the end of March that this project
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
-      <description>fleshing out the bones
-understanding the human remains trade
-with computer vision    Shawn Graham &amp;amp; Damien Huffer
-@electricarchaeo @DamienHuffer follow along at j.mp/sg-dh-qm18 Note: - late 19th century &amp;amp; scientific racism - human zoos &amp;amp; the human cost
-Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe.</description>
+      <description>Note:
+ late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
+ Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
     </item>
     
     <item>

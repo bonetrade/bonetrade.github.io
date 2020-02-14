@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -88,6 +88,16 @@
   </url>
   
   <url>
+    <loc>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</loc>
+    <lastmod>2019-04-18T11:30:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bonetrade.github.io/update/</loc>
+    <lastmod>2019-04-18T11:30:45-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bonetrade.github.io/papers/fields-02-19/</loc>
     <lastmod>2019-02-27T18:36:24+02:00</lastmod>
   </url>
@@ -129,11 +139,11 @@
   
   <url>
     <loc>https://bonetrade.github.io/_footer/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bonetrade.github.io/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -142,13 +152,6 @@
   
   <url>
     <loc>https://bonetrade.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://bonetrade.github.io/update/</loc>
-    <lastmod>2019-04-18T11:30:45-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

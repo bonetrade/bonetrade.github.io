@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Blogdown Breakdown :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -287,6 +294,7 @@
     <option value="/update/" >
    Updates</option> 
       <option value="/update/2019-04-18-blogdown-breakdown/"  selected>- Blogdown Breakdown</option>
+      <option value="/update/2019-06-17-skeleton-keys/" >- Skeleton Keys</option>
       <option value="/update/2019-02-24-learning-curve/" >- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/" >- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/" >- Tensorflow for Poets</option>
@@ -319,35 +327,18 @@
     
     
     
-    
-
-<p>2019-04-25 A Memo To Self on A Blogdown Breakdown</p>
-
+    <p>2019-04-25 A Memo To Self on A Blogdown Breakdown</p>
 <h2 id="out-of-cheese-error">Out of Cheese Error</h2>
-
 <p>At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &lsquo;sproing!&rsquo; and Hex will report the helpful error message, &lsquo;out of cheese error&rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&rsquo;s presentation in Stockholm.</p>
-
 <p>The command to build the site is <code>blogdown::build_site()</code>. Normally, everything is tickety-boo, but THIS morning:</p>
-
 <pre><code>execute of template failed: template: partials/flex/body-aftercontent.html:40:9: executing &quot;partials/flex/body-aftercontent.html&quot; at &lt;where .Site.Pages &quot;S...&gt;: error calling where: Source isn't a field of struct type *hugolib.Page
-</code></pre>
-
-<p>I spent a fruitless few minutes tinkering with things, before remembering the cardinal rule of error messages: google &lsquo;em. I found <a href="https://github.com/vjeantet/hugo-theme-docdock/issues/166">this discussion</a> which suggested looking through the theme templates for this line:</p>
-
+</code></pre><p>I spent a fruitless few minutes tinkering with things, before remembering the cardinal rule of error messages: google &lsquo;em. I found <a href="https://github.com/vjeantet/hugo-theme-docdock/issues/166">this discussion</a> which suggested looking through the theme templates for this line:</p>
 <pre><code>{{ range where .Site.Pages &quot;Source.BaseFileName&quot; $header }}
-</code></pre>
-
-<p>and replacing like so:</p>
-
+</code></pre><p>and replacing like so:</p>
 <pre><code>{{ range where .Site.Pages &quot;.File.BaseFileName&quot; $header }}
-</code></pre>
-
-<p>and</p>
-
+</code></pre><p>and</p>
 <pre><code>{{ range where .Site.Pages &quot;.File.BaseFileName&quot; $footer }}
-</code></pre>
-
-<p>&hellip;and that solved the problem. Apparently, something changed in the underlying Hugo site-building engine. Build a static website, they said. It&rsquo;ll make life easier, they said&hellip;</p>
+</code></pre><p>&hellip;and that solved the problem. Apparently, something changed in the underlying Hugo site-building engine. Build a static website, they said. It&rsquo;ll make life easier, they said&hellip;</p>
 
 
     
@@ -355,7 +346,7 @@
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/update/" title="Updates"> <i class="fa fa-chevron-left"></i><label>Updates</label></a>
-    <a class="nav nav-next" href="/update/2019-02-24-learning-curve/" title="Learning Curve" style="margin-right: 0px;"><label>Learning Curve</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/update/2019-06-17-skeleton-keys/" title="Skeleton Keys" style="margin-right: 0px;"><label>Skeleton Keys</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -385,8 +376,7 @@
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

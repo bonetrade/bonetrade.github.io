@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Tensorflow for Poets :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -287,6 +294,7 @@
     <option value="/update/" >
    Updates</option> 
       <option value="/update/2019-04-18-blogdown-breakdown/" >- Blogdown Breakdown</option>
+      <option value="/update/2019-06-17-skeleton-keys/" >- Skeleton Keys</option>
       <option value="/update/2019-02-24-learning-curve/" >- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/" >- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/"  selected>- Tensorflow for Poets</option>
@@ -320,27 +328,18 @@
     
     
     <p>2018-06-14</p>
-
 <p>In our recent paper, <a href="https://journal.caa-international.org/articles/10.5334/jcaa.8/">&lsquo;Fleshing Out the Bones&rsquo;</a> we used the trained &lsquo;Inception 3&rsquo; model as a way of determining clusters of images that we then studied for clues and hints: <em>why</em> did the machine cluster them this way? What are the common features?</p>
-
 <p>Unsupervised learning: It&rsquo;s not unlike reading entrails.</p>
-
-<p><img src="/update/2018-06-14-tensorflow-for-poets_files/219px-Piacenza_Bronzeleber.jpg" alt="Diagram of the sheep's liver found near Piacenza with Etruscan inscriptions on the bronze sheep's Liver of Piacenza, Wikipedia" /></p>
-
+<p><img src="/update/2018-06-14-tensorflow-for-poets_files/219px-Piacenza_Bronzeleber.jpg" alt="Diagram of the sheep&rsquo;s liver found near Piacenza with Etruscan inscriptions on the bronze sheep&rsquo;s Liver of Piacenza, Wikipedia"></p>
 <p>An alternate approach is to take an existing model, and add new training data to it. Pete Warden put together a tutorial a few years ago called <a href="https://petewarden.com/2016/02/28/tensorflow-for-poets/">Tensorflow for Poets</a> that has since been formalized as a <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0">Google CodeLabs tutorial</a>. Last night I tried the tutorial out using a corpus of Roman fabrics and wares. The nuts-and-bolts of doing this are over in the <a href="/tutorials/tensorflow-for-poets">tutorials</a>.</p>
-
 <p>The hardest part was getting the training data organized. It needs to be in a folder where each image is in a subfolder where the name of the subfolder is the category, eg:</p>
-
 <pre><code>|
 |-training-images
   |
   |-terrasig
   |-african_red_slip
   |-veranice_nera
-</code></pre>
-
-<p>&hellip;etc. Once that was done, it went quite smoothly. What will take some <em>time</em> is figuring out what the different <code>architecture</code> and other flags do. For instance, in the default command suggested by the tutorial, I had to determine that I needed to add the flag on validation size and set it to use the entire training set (as my training set is probably way too small).</p>
-
+</code></pre><p>&hellip;etc. Once that was done, it went quite smoothly. What will take some <em>time</em> is figuring out what the different <code>architecture</code> and other flags do. For instance, in the default command suggested by the tutorial, I had to determine that I needed to add the flag on validation size and set it to use the entire training set (as my training set is probably way too small).</p>
 <pre><code>python -m scripts.retrain \
   --bottleneck_dir=tf_files/bottlenecks \
   --how_many_training_steps=500 \
@@ -351,14 +350,10 @@
   --architecture mobilenet_0.50_224 \
   --validation_batch_size=-1 \
   --image_dir=tf_files/gallery
-</code></pre>
-
-<blockquote>
+</code></pre><blockquote>
 <p>&ldquo;The architecture flag is where we tell the retraining script which version of MobileNet we want to use. The 1.0 corresponds to the width multiplier, and can be 1.0, 0.75, 0.50 or 0.25. The 224 corresponds to image resolution, and can be 224, 192, 160 or 128. For example, to train the smallest version, you’d use &ndash;architecture mobilenet_0.25_128.&rdquo; <a href="https://hackernoon.com/creating-insanely-fast-image-classifiers-with-mobilenet-in-tensorflow-f030ce0a2991">Harvey, 2017</a></p>
 </blockquote>
-
 <p>I&rsquo;m not sure I understand exactly what this all means yet, practically speaking. Anyway, I now know what I&rsquo;ll need our MA research assistants to do this fall.</p>
-
 <ol>
 <li>study our first corpus&rsquo; clustering results to come up with some training categories</li>
 <li>divide that corpus into a training dataset</li>
@@ -367,7 +362,6 @@
 <li>compare that with the clustering approach without our new classifier.</li>
 <li>compare the results of both with the posts&rsquo; text</li>
 </ol>
-
 <p>The ambition? To be able to sort at scale the images we find automatically into sensible structure.</p>
 
 
@@ -406,8 +400,7 @@
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

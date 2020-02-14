@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Building a Website with Blogdown :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -337,7 +344,6 @@
     
 
 <p>This website is built with blogdown.</p>
-
 <pre><code>setwd(&quot;/Users/path/to/your/files/username.github.io&quot;)
 blogdown::new_site(dir = &quot;usernameFiles&quot;, #New Directory within working directory where web content will be stored
                    theme = 'vjeantet/hugo-theme-docdock', #theme information
@@ -346,22 +352,14 @@ blogdown::new_site(dir = &quot;usernameFiles&quot;, #New Directory within workin
 setwd(&quot;usernameFiles&quot;)
 blogdown::build_site()
 blogdown::serve_site()
-</code></pre>
-
-<p>That builds the shell of the site in a subfolder inside your username.github.io repository on your computer.</p>
-
+</code></pre><p>That builds the shell of the site in a subfolder inside your username.github.io repository on your computer.</p>
 <p><code>blogdown::build_site()</code> builds your website. Copy the contents of the generated public folder to the username.github.io directory.</p>
-
 <pre><code>git add .
 git commit -m &quot;first commit&quot;
 git push -u origin master
-</code></pre>
-
-<p>The insert image add-in for blogdown makes putting your image in the correct spot a whole lot easier. Make sure to install it. For the full rundown on how to use blogdown, see <a href="https://bookdown.org/yihui/blogdown/">the manual</a>.
+</code></pre><p>The insert image add-in for blogdown makes putting your image in the correct spot a whole lot easier. Make sure to install it. For the full rundown on how to use blogdown, see <a href="https://bookdown.org/yihui/blogdown/">the manual</a>.
 et voila.</p>
-
 <p>With this particular theme, you generate the navigation structure by nesting folders inside folders and each subfolder has its own <code>_index.md</code> file. In that index file you have <code>weight = 10</code> or whatever value in the TOML so that folders at the same level of the hierarchy appear in the correct order.</p>
-
 <p>In your terminal, navigate to your usernameFiles folder, and run <code>hugo server</code>. Then, any changes you make in rStudio to your source files is automatically reflected at <code>localhost:1313</code> in your browser.</p>
 
 
@@ -397,8 +395,7 @@ et voila.</p>
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

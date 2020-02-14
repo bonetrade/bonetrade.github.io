@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Affinity Propagation in R :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -222,6 +222,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -363,7 +370,8 @@ library(ggplot2)
 g = ggplot(mydata, aes(x = x, y = y)) + geom_point() + labs(title = &quot;T-SNE Plot of Image Similarity Vectors&quot;)
 print(g)</code></pre>
 <p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p><img src="unnamed-chunk-2-1.png" /> To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through ‘apcluster’:</p>
+<p><img src="unnamed-chunk-2-1.png" />
+To the eye, there is clearly structure. So how many clusters? We first get the data ready for the affinity propagation algorithm by passing it to a new variable, and then running it through ‘apcluster’:</p>
 <pre class="r"><code>X &lt;- cbind(mydata$x, mydata$y)
 
 ## affinity propogation
@@ -379,10 +387,7 @@ cat(&quot;affinity propogation optimal number of clusters:&quot;, length(d.apclu
 <p>Finally, we can plot these clusters:</p>
 <pre class="r"><code>plot(d.apclus, X)</code></pre>
 <p><img src="/tutorials/classify-images-with-tensorflow/affinity-propagation-in-r/_index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<div class="figure">
-<img src="unnamed-chunk-4-1.png" />
-
-</div>
+<p><img src="unnamed-chunk-4-1.png" /></p>
 </div>
 
 
@@ -418,8 +423,7 @@ cat(&quot;affinity propogation optimal number of clusters:&quot;, length(d.apclu
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

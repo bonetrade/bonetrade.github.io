@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Papers and Publications on The Bonetrade Project</title>
@@ -17,10 +17,7 @@
       <pubDate>Wed, 29 May 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/york-05-29/</guid>
-      <description>what the machine saw:
-Studying the trade in human remains
-in an era of big data    Shawn Graham
-Carleton University @electricarchaeo follow along at bit.ly/sg-york Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold.</description>
+      <description>Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold. Spoke with a scholar in sweden last month, lovely fellow, who just didn&amp;rsquo;t see why anyone should care about bones: they do not mean anything to him, therefore it follows that anyone feeling different is just misguided.</description>
     </item>
     
     <item>
@@ -29,13 +26,11 @@ Carleton University @electricarchaeo follow along at bit.ly/sg-york Note: Would 
       <pubDate>Thu, 25 Apr 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/stockholm-04-25/</guid>
-      <description>teaching machines to see like archaeologists
-neural networks,
-and the antiquities trades    Shawn Graham
-@electricarchaeo follow along at bit.ly/sg-apr25 which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
-narrator: we don&amp;rsquo;t Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
+      <description>which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
+ narrator: we don&amp;rsquo;t  Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
 pompeian wall styles
-human remains</description>
+human remains
+ What it would be nice to be able to do  teach the machines to understand style teach the machines to spot the differences between a forgery &amp;amp; something authentic send the machines out there to do the spotting at a scale and speed that we could never hope to achieve with our own fleshy fingers &amp;amp; imperfect eyes   ethical dangers  reification of a privileged point of view of what constitutes &amp;lsquo;style&amp;rsquo; or &amp;lsquo;material culture&amp;rsquo; automated authentication to raise the price of antiquities and fuel the trade replication of the sins of scientific racism   how neural networks beget computer vision Alex Mordvintsev</description>
     </item>
     
     <item>
@@ -44,11 +39,9 @@ human remains</description>
       <pubDate>Wed, 27 Feb 2019 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/fields-02-19/</guid>
-      <description>What Am I Looking At?
-Computer Vision,
-Digital Phrenology, and the Trade in Human Remains    Shawn Graham
-@electricarchaeo follow along at bit.ly/sg-ut2019 Note: - late 19th century &amp;amp; scientific racism - human zoos &amp;amp; the human cost
-Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe.</description>
+      <description>Note:
+ late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
+ Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
     </item>
     
     <item>
@@ -57,11 +50,9 @@ Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convi
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
       <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
-      <description>fleshing out the bones
-understanding the human remains trade
-with computer vision    Shawn Graham &amp;amp; Damien Huffer
-@electricarchaeo @DamienHuffer follow along at j.mp/sg-dh-qm18 Note: - late 19th century &amp;amp; scientific racism - human zoos &amp;amp; the human cost
-Abraham Ulrikab Note: - Abraham Ulrikab - Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe.</description>
+      <description>Note:
+ late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
+ Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
     </item>
     
   </channel>

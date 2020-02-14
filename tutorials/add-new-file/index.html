@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Adding New Content Via Github :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -336,38 +343,25 @@
     
     
 
-
-
 <p>This project website, its public face, is generated using Blogdown. Blogdown itself is built on Hugo, a generator for static websites from simple textfiles. The reason that we use the Blogdown version is that it can handle text written in R-Markdown. And why does R-Markdown matter? This is a version of the markdown text file that can have embedded R code in it, which R can run when the site is generated - and so we can integrate analytical code into our writing.</p>
-
 <p>Remember when your math teacher said, &lsquo;show your work&rsquo;? Turns out, that is profoundly important for reproducibility and replicability in research. Given that we work at public institutions, using public money, we rather think that&rsquo;s important.</p>
-
 <p>The other nice aspect to using simple text files, a site generator, and Github, is that all of our writing and research is kept under version control. Github allows us to edit files directly on their website, which is handy for quick things like a blog post.</p>
-
 <h3 id="getting-started">Getting started</h3>
-
 <ol>
 <li>Make sure you have a <a href="http://github">github</a> account.</li>
 <li>Make sure that you are added as a member of the organization that controls the repo in question - in this case, <a href="https://github.com/bonetrade/blog-source-files">&lsquo;blog source files&rsquo;</a>. (On Shawn&rsquo;s computer, he&rsquo;s got the &lsquo;content&rsquo; subfolder of the blogdown folder under version control).</li>
 <li>Organizations you belong to will be shown to the bottom left of the screen when you&rsquo;re on your own Github profile page. Once you&rsquo;re a member, login to Github and navigate directly to the repo. So, make sure you&rsquo;re in <code>blog-source-files</code>. You now have displayed the list of folders from which the content of this site is created.</li>
 </ol>
-
 <h3 id="writing">Writing</h3>
-
 <ol>
 <li>Click on the &lsquo;Updates&rsquo; folder. This is the blog portion of this site.</li>
 <li>Click on &lsquo;create new file&rsquo;</li>
 <li>You should see the editor, like so:</li>
 </ol>
-
-<p><img src="new-file-on-github.png" alt="Editor window on Github" /></p>
-
+<p><img src="new-file-on-github.png" alt="Editor window on Github"></p>
 <p>To make writing a bit more pleasant, tick the &lsquo;no wrap&rsquo; dropdown at the right hand side and select &lsquo;soft wrap&rsquo;.</p>
-
 <p>Give the blog post a name where the first part is the date, eg: <code>2018-05-03-learning-a-new-tool.md</code>. The <code>.md</code> part tells us that this is a text file written in the markdown format. Please don&rsquo;t forget that!</p>
-
 <p>Make sure that the first text you write is the post <strong>metadata</strong>, which follows the pattern below (this is &lsquo;toml&rsquo; format, by the way):</p>
-
 <pre><code>+++
 title= &quot;Getting Started!&quot;
 date= 2018-04-16T15:16:31-04:00
@@ -381,20 +375,12 @@ draft= false
 
 We are pleased to announce....
 
-</code></pre>
-
-<p>And that&rsquo;s all there is to it. Follow <a href="https://daringfireball.net/projects/markdown/syntax">markdown conventions</a>. <strong>WARNING</strong> Nothing is saved as you type. To save your work, you have to make a &lsquo;commit&rsquo;:</p>
-
-<p><img src="commit-file-on-github.png" alt="Screenshot of ‘commiting’ a file on github" />.</p>
-
+</code></pre><p>And that&rsquo;s all there is to it. Follow <a href="https://daringfireball.net/projects/markdown/syntax">markdown conventions</a>. <strong>WARNING</strong> Nothing is saved as you type. To save your work, you have to make a &lsquo;commit&rsquo;:</p>
+<p><img src="commit-file-on-github.png" alt="Screenshot of ‘commiting’ a file on github">.</p>
 <p>Give your commit a short descriptive message - this will appear in the list of &lsquo;snapshots&rsquo; that comprise the history of this repository - and add a longer message if you like. Commit directly to the master branch.</p>
-
 <h3 id="adding-images">Adding images</h3>
-
 <p>Any images you want to have appear in the post need to be in this folder as well. In your text, you can add an image using markdown like so: <code>![image descriptive text](imagename.png)</code> . Then, after you&rsquo;ve committed your text, drag-and-drop your image into the repo (literally drag it onto the list of files in this folder). You&rsquo;ll be asked to make a commit message for this too.</p>
-
 <h3 id="r-markdown">R markdown</h3>
-
 <p>Writing an R markdown post works exactly the same way as everything else described above; just make sure that you follow the conventions correctly. Any data files that you want to use in your R markdown should be uploaded to this repository (ie they were in the same working directory when you wrote the R markdown, so they should be in the same folder in the repo when I build the website).</p>
 
 
@@ -434,8 +420,7 @@ We are pleased to announce....
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

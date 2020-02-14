@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Learning Curve :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item active">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -287,6 +294,7 @@
     <option value="/update/" >
    Updates</option> 
       <option value="/update/2019-04-18-blogdown-breakdown/" >- Blogdown Breakdown</option>
+      <option value="/update/2019-06-17-skeleton-keys/" >- Skeleton Keys</option>
       <option value="/update/2019-02-24-learning-curve/"  selected>- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/" >- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/" >- Tensorflow for Poets</option>
@@ -319,34 +327,19 @@
     
     
     
-    
-
-<p>2019-02-2</p>
-
-<h3 id="it-s-been-steep">It&rsquo;s been steep</h3>
-
+    <p>2019-02-2</p>
+<h3 id="its-been-steep">It&rsquo;s been steep</h3>
 <p>We&rsquo;ve been pretty quiet in terms of updates because, well, it&rsquo;s been a helluva learning curve this year. Our other project - the <a href="http://o-date.github.io">Open Digital Archaeology Textbook Environment</a> - won the <a href="https://www.archaeological.org/awards/digitalarch">AIA Award for Outstanding Work in Digital Archaeology</a>, which was very gratifying as we could use some of what we were learning for <em>this</em> project to help expand <em>that</em> one.</p>
-
-<p><img src="DzxqWTMV4AYQHr6.jpg" alt="" /></p>
-
+<p><img src="DzxqWTMV4AYQHr6.jpg" alt=""></p>
 <p>We also hosted a fantastic line up of speakers at Carleton University for the Shannon Lectures in History, on the theme of &lsquo;Bad Archaeology&rsquo; - all five lectures were videotaped and can be viewed at the <a href="https://www.youtube.com/watch?v=A_LFGoBPW-g&amp;list=PLjxbmFWpFg61Z761lD_ifbmPN86F54cWx">History Department Youtube Channel</a>. All of this was folded into Shawn&rsquo;s teaching in the fall in the <a href="http://shawngraham.github.io/bad-archaeology">&lsquo;Bad Archaeology&rsquo; senior seminar</a>. An interview about our work was published <a href="https://carleton.ca/fass/story/innovative-historian-studies-the-sale-of-human-remains-on-the-internet/">on the front page of the Carleton U website</a>. Damien and I presented our work at a number of places -</p>
-
 <p>September 2018: “Where did you get that?!: A multi-disciplinary investigation of Colonial era and modern Dayak ancestral skull collecting.” 21st Congress of the Indo-Pacific Prehistory Association, Hue, Vietnam.</p>
-
 <p>August 2018: “Taphonomy, Trafficking, and the Forgery of Ethnographic Human Remains.” 8th European Meeting for Forensic Archaeology, Queens University, Belfast.</p>
-
 <p>June 2018: &ldquo;Fleshing out the Bones: Understanding the human remains trade with computer vision&rdquo;. Transatlantic Cultural Property Crime Symposium, Queen Mary University of London, London.</p>
-
 <p>April 2018: “Bioarchaeological Approaches to Investigating Supply, Demand and Authenticity in the Colonial-era Human Remains Trade.” Society for American Archaeology conference, Washington, D.C.</p>
-
 <p>Damien also published work related to our project:</p>
-
-<p>Halcrow, S.E., Killgrove, K., Schug, G.R., Knapp, M., Huffer, D., Arriaza, B., Jungers, W., Gunter, J. 2018. On engagement with anthropology: A critical evaluation of skeletal and developmental   abnormalities in the Atacama preterm baby and issues of forensic and bioarchaeological research     ethics. Response to Bhattacharya et al. &ldquo;Whole-genome sequencing of Atacama skeleton shows  novel mutations linked with dysplasia&rdquo; in Genome Research, 2018, 28: 423-431. <a href="https://www.sciencedirect.com/science/article/pii/S1879981718300548">Doi:10.1101/gr.223693.117</a>. International Journal of Paleopathology 22: 97-100.</p>
-
+<p>Halcrow, S.E., Killgrove, K., Schug, G.R., Knapp, M., Huffer, D., Arriaza, B., Jungers, W., Gunter, J. 2018. On engagement with anthropology: A critical evaluation of skeletal and developmental 	abnormalities in the Atacama preterm baby and issues of forensic and bioarchaeological research 	ethics. Response to Bhattacharya et al. &ldquo;Whole-genome sequencing of Atacama skeleton shows 	novel mutations linked with dysplasia&rdquo; in Genome Research, 2018, 28: 423-431. <a href="https://www.sciencedirect.com/science/article/pii/S1879981718300548">Doi:10.1101/gr.223693.117</a>. International Journal of Paleopathology 22: 97-100.</p>
 <p>Huffer, D. 2018. The living and the dead entwined in virtual space: #Bioarchaeology and being a bioarchaeologist on Instagram. Advances in Archaeological Practice 6: 267-273</p>
-
 <p>So what&rsquo;s the &lsquo;steep&rsquo; part of all this? Consider -</p>
-
 <ul>
 <li>learning how to scrape</li>
 <li>mysql for managing the database</li>
@@ -355,11 +348,8 @@
 <li>Deep Convolutional Generative Adversarial Networks</li>
 <li>high performance computing infrastructures</li>
 </ul>
-
 <p>&hellip;well, we&rsquo;ve been reading a lot of Stackoverflow. But we&rsquo;re also grateful for the work of people like <a href="http://ml4a.github.io/">Gene Kogan &amp; Machine Learning for Artists</a>, <a href="https://douglasduhaime.com/">Douglas Duhaime</a>, and <a href="https://wandering.shop/@janellecshane">Janelle Shane</a>. We&rsquo;re also pleased that our first RA, Cristina Wood, signed onboard to work with us!</p>
-
-<p><img src="DrdB7V9X4AAa8W3.jpg" alt="" /></p>
-
+<p><img src="DrdB7V9X4AAa8W3.jpg" alt=""></p>
 <p>(DCGAN generated &lsquo;skulls&rsquo; - what the computer thinks it sees when we feed it what we&rsquo;ve collected)</p>
 
 
@@ -367,7 +357,7 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/update/2019-04-18-blogdown-breakdown/" title="Blogdown Breakdown"> <i class="fa fa-chevron-left"></i><label>Blogdown Breakdown</label></a>
+<a class="nav nav-prev" href="/update/2019-06-17-skeleton-keys/" title="Skeleton Keys"> <i class="fa fa-chevron-left"></i><label>Skeleton Keys</label></a>
     <a class="nav nav-next" href="/update/2018-07-29-dcgan-for-archaeologists/" title="DCGAN for Archaeologists" style="margin-right: 0px;"><label>DCGAN for Archaeologists</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
@@ -398,8 +388,7 @@
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

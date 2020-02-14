@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Setting up a SQLite DB :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -336,85 +343,50 @@
     
     
 
-
-
 <p>The data that we scraped using Scrapy was output as json files. Json stands for &lsquo;JavaScript Object Notation&rsquo; and records values as attribute-data pairs and lists these pairs in arrays. Because we are not building a complex multi-faceted database, and we might want to expose this data for other kinds of uses later on (perhaps as our <a href="https://programminghistorian.org/lessons/creating-apis-with-python-and-flask">own API</a>), we are going to take that data and put it into a sqlite database.</p>
-
 <p>This will also enable us to identify duplicate values (data that got captured via multiple searches or hashtags, for instance), extract and reshape the data for particular purposes, connect our data to R for subsequent analyses, and deposit the data in our data repo.</p>
-
 <h2 id="requirements">Requirements</h2>
-
 <ul>
 <li><a href="https://sqlitebiter.readthedocs.io/en/latest/index.html">sqlitebiter</a> a python utility for ingesting a wide variety of data formats into an sqlite db</li>
 <li>python</li>
 </ul>
-
 <p>First, set up a virtualenv:</p>
-
 <pre><code>$ mkdir database-work
 $ virtualenv database-work
 $ source database-work/bin/activate
-</code></pre>
-
-<p>Install sqlitebiter:</p>
-
+</code></pre><p>Install sqlitebiter:</p>
 <pre><code>$ pip install sqlitebiter
-</code></pre>
-
-<p>This will install a bunch of other dependencies - which is why we&rsquo;re using a virtualenv, so that these dependencies don&rsquo;t conflict with other packages we&rsquo;re using.</p>
-
+</code></pre><p>This will install a bunch of other dependencies - which is why we&rsquo;re using a virtualenv, so that these dependencies don&rsquo;t conflict with other packages we&rsquo;re using.</p>
 <h2 id="making-the-database">Making the database</h2>
-
 <p>Assuming you have the concatenated file containing all of the results from the scrape as a properly formatted json file in the current folder,</p>
-
 <pre><code>sqlitebiter file scrape-results.json -o scrape-results-current-date.sqlite
-</code></pre>
-
-<p>Then, to finish things up,</p>
-
+</code></pre><p>Then, to finish things up,</p>
 <pre><code>$ sqlite3 scrape-results-current-date.sqlite
  &gt;&gt;&gt; .schema
  &gt;&gt;&gt; .exit
-</code></pre>
-
-<p>The <code>&gt;&gt;&gt;</code> on the command line show us we&rsquo;re inside sqlite. We could continue to work on the command line with sqlite, but sometimes a gui does make life easier. We&rsquo;ll use <a href="http://sqlitebrowser.org/">sqlitebrowser</a>. Download and install. Then, open the dbbrowser and open the database you just created.</p>
-
-<p><img src="https://github.com/sqlitebrowser/sqlitebrowser/raw/master/images/sqlitebrowser.png" alt="Example screenshot of a typical DB-browser interface" /></p>
-
+</code></pre><p>The <code>&gt;&gt;&gt;</code> on the command line show us we&rsquo;re inside sqlite. We could continue to work on the command line with sqlite, but sometimes a gui does make life easier. We&rsquo;ll use <a href="http://sqlitebrowser.org/">sqlitebrowser</a>. Download and install. Then, open the dbbrowser and open the database you just created.</p>
+<p><img src="https://github.com/sqlitebrowser/sqlitebrowser/raw/master/images/sqlitebrowser.png" alt="Example screenshot of a typical DB-browser interface"></p>
 <p>Click &lsquo;browse data&rsquo; and you&rsquo;ll see the data in a clean table view. The data can be exported as csv. Here are some simple SQL queries we can run to do some common tasks for us. To run these, click &lsquo;execute sql&rsquo; and paste the query into the edit window. Once the query is there (these queries can also be saved and loaded from file) hit the &lsquo;run&rsquo; button to execute.</p>
-
 <h3 id="example-queries">Example Queries</h3>
-
 <p>A query to select distinct rows, that is to say, remove duplicate values:</p>
-
 <pre><code>select distinct
 id, caption, display_url, owner_name, taken_at_timestamp
 from
 scrape-results-current-date;
-</code></pre>
-
-<p>make a new table from those distint values:</p>
-
+</code></pre><p>make a new table from those distint values:</p>
 <pre><code>create table individual_posts
 as 
 select distinct id, caption, display_url, owner_name, taken_at_timestamp
 from scrape-results-current-date;
-</code></pre>
-
-<p>select distinct rows by keyword in a field:</p>
-
+</code></pre><p>select distinct rows by keyword in a field:</p>
 <pre><code>select distinct
 id, caption, display_url, owner_name, taken_at_timestamp
 from
 individual_posts
 where caption like '%sale%';
-</code></pre>
-
-<p>convert unix timestamp to human-readable date</p>
-
+</code></pre><p>convert unix timestamp to human-readable date</p>
 <pre><code>UPDATE unique_posts SET taken_at_timestamp = datetime(taken_at_timestamp, 'unixepoch', 'localtime')
 </code></pre>
-
 
 
     
@@ -448,8 +420,7 @@ where caption like '%sale%';
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Updates on The Bonetrade Project</title>
@@ -18,7 +18,19 @@
       
       <guid>https://bonetrade.github.io/update/2019-04-18-blogdown-breakdown/</guid>
       <description>2019-04-25 A Memo To Self on A Blogdown Breakdown
-Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.</description>
+Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.
+The command to build the site is blogdown::build_site().</description>
+    </item>
+    
+    <item>
+      <title>Skeleton Keys</title>
+      <link>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</link>
+      <pubDate>Thu, 18 Apr 2019 11:30:45 -0400</pubDate>
+      
+      <guid>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</guid>
+      <description>2019-04-25 Skeleton Keys &amp;amp; Popular Science Podcast
+Our work was referenced and discussed in a new popular science book by author Brian Switek, &amp;lsquo;Skeleton Keys: The Secret Life of Bone&amp;rsquo;. The book is discussed at https://www.popsci.com/skeleton-keys-excerpt/ . You can also listen to the &amp;lsquo;Weirdest Thing&amp;rsquo; podcast talk about our work at https://www.popsci.com/weirdest-thing-falcon-sex-instagram-bones-sleep-twitch/
+ Archaeologists such as Damien Huffer track how human remains are marketed and sold over people’s smartphones, and, with colleague Shawn Graham, he dug into the mechanics of the trade in a 2017 paper called “The Insta‑Dead: The Rhetoric of the Human Remains Trade on Instagram.</description>
     </item>
     
     <item>

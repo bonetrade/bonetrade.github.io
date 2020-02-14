@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Importing SQLite DB into R :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -336,16 +343,10 @@
     
     
 
-
-
-<h3 id="i-ve-got-data-now-what">I&rsquo;ve got data, now what?</h3>
-
+<h3 id="ive-got-data-now-what">I&rsquo;ve got data, now what?</h3>
 <p>We&rsquo;ve already explained how to <a href="/Sqlite">put data into a SQLite database</a>. Now we want to grab a subset of that data and pull it into R where we can analayze or visualize it, or combine it with other kinds of data. It is in fact quite straightforward.</p>
-
 <p>We write a script that tells R to open a connection to the database; then we tell it what&rsquo;s inside that database; then we write an SQL query <em>in R</em> that grabs just the bits we&rsquo;re interested in and passes it to a new R object; and then we shut the connection and clear the cache.</p>
-
 <p>In this way, we&rsquo;re never directly modifying our datastore. We&rsquo;re always working on a copy of the data, which is handy because when we screw up - and we will - we can rest easy knowing the original data is still ok. The code looks like this:</p>
-
 <pre><code># first we get the packages we need:
 library(DBI)
 library(RSQLite)
@@ -375,7 +376,6 @@ dbClearResult(myQuery)
 # also perhaps this https://www.r-bloggers.com/using-sqlite-in-r/
 
 </code></pre>
-
 
 
     
@@ -413,8 +413,7 @@ dbClearResult(myQuery)
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>DCGAN for Archaeologists :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -287,6 +294,7 @@
     <option value="/update/" >
    Updates</option> 
       <option value="/update/2019-04-18-blogdown-breakdown/" >- Blogdown Breakdown</option>
+      <option value="/update/2019-06-17-skeleton-keys/" >- Skeleton Keys</option>
       <option value="/update/2019-02-24-learning-curve/" >- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/"  selected>- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/" >- Tensorflow for Poets</option>
@@ -319,55 +327,33 @@
     
     
     
-    
-
-<p>2018-07-29</p>
-
+    <p>2018-07-29</p>
 <h3 id="learning-about-gans">Learning about GANs</h3>
-
 <p><a href="https://melvinwevers.github.io/">Melvin Wevers</a> has been using <a href="http://lab.kb.nl/about-us/blog/find-what-you-were-looking-using-neural-networks-trawl-through-newspaper">neural networks to understand visual patterns in the evolution of newspaper advertisements in Holland</a>. He and his team developed <a href="http://lab.kb.nl/tool/siamese">a tool for visually searching the newspaper corpus</a>. Melvin presented some of his research at <a href="https://twitter.com/search?q=dh2018&amp;src=typd">#dh2018</a>; he shared his <a href="https://melvinwevers.github.io/pdf/Poster_DH18.pdf">poster</a> and <a href="https://melvinwevers.github.io/pdf/Wevers_Smits_SEEING_HISTORY_small.pdf">slides</a> so I was able to have a look. Afterwards, I reached out to Melvin and we had a long conversation about using computer vision in historical research.</p>
-
 <p>His poster is called &lsquo;ImageTexts: Studying Images and Texts in Conjunction&rsquo; which clearly is relevant to our work in the BoneTrade. In his research, he looks at the text for &lsquo;bursty&rsquo; changes in the composition of the text. That is, points where the content changes &lsquo;state&rsquo; in terms of the frequency of the word distribution. The other approach is to use Generative Adversarial Networks on the images.</p>
-
 <p>So what are GAN? <a href="https://medium.com/@devnag/generative-adversarial-networks-gans-in-50-lines-of-code-pytorch-e81b79659e3f">This post is a nice introduction</a> and uses this image to capture the idea:</p>
-
-<p><img src="https://cdn-images-1.medium.com/max/1600/1*-gFsbymY9oJUQJ-A3GTfeg.png" alt="Image from Dev Nag on Medium" /></p>
-
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*-gFsbymY9oJUQJ-A3GTfeg.png" alt="Image from Dev Nag on Medium"></p>
 <p>In essence, you have <em>two</em> networks. One learning how to identify your source images, and the second learning how to fool the first by creating <em>new</em> images from scratch.</p>
-
 <p>Why should we care about this sort of thing? For our purposes here, it is one way of learning just what features of our source images our identifiers are looking for (there are <a href="https://tools.google.com/seedbank/seed/5105650963054592">others</a> of course). Remember that one of the points of our research is to understand the visual rhetoric of these images. If we can successfully trick the network, then we know what aspects of the network we should be paying attention to. Another intriguing aspect of this approach is that it allows a kind of &lsquo;semantic arithmetic&rsquo; of the kind we&rsquo;re familiar with from word vectors:</p>
-
 <blockquote>
 <p>The easiest way to think about words and how they can be added and subtracted like vectors is with an example. The most famous is the following: king – man + woman = queen. In other words, adding the vectors associated with the words king and woman while subtracting man is equal to the vector associated with queen. This describes a gender relationship.</p>
-
 <p>Another example is: paris – france + poland = warsaw. In this case, the vector difference between paris and france captures the concept of capital city.</p>
 </blockquote>
-
 <ul>
 <li><a href="https://www.technologyreview.com/s/541356/king-man-woman-queen-the-marvelous-mathematics-of-computational-linguistics/">MIT Tech Review, Sept 17 2015</a></li>
 </ul>
-
 <p>I will admit that I haven&rsquo;t figured out quite how to do this yet, but I&rsquo;ve found various code snippets that should permit this.</p>
-
 <p>Finally, as Wevers puts it, &lsquo;The verisimilitude of the generated images is an indication of the meaningfulness of the learned subspace&rsquo;. That is, if our generated images are not much good, then that&rsquo;s an indication that there&rsquo;s just far too much noise going on in our source data in the first place. Garbage in, garbage out. In Melvin&rsquo;s poster, the GAN &ldquo;was able to learn the variances in car models, styling, color, position and photographic composition seen in the adverts themselves.&rdquo;</p>
-
 <p>In which case, it seems that GANS are a worthwhile avenue to explore for our research.</p>
-
 <p>Dominic Monn published an <a href="https://www.oreilly.com/ideas/deep-convolutional-generative-adversarial-networks-with-tensorflow">article</a> and accompanying <a href="https://github.com/dmonn/dcgan-oreilly">Jupyter Notebook</a> on building a GAN trained on one of the standard databases, &lsquo;CelebFaces Attributes data set&rsquo; which has more than 200,000 photographs of &lsquo;celebrities&rsquo; (training dataset composition is a topic for another post). It&rsquo;s probably a function of my computer but I couldn&rsquo;t get this up and running correctly (setting up and using AWS computing power will be a post and tutorial in due course). It is interesting in that it does walk you through the code, which is not as forbidding as I&rsquo;d initially assumed.</p>
-
-<p>I had more success with Taehoon Kim&rsquo;s &lsquo;tensorflow implementation of &ldquo;Deep Convolutional Generative Adversarial Networks&rdquo;&rsquo;, which is available on Github at <a href="https://github.com/carpedm20/DCGAN-tensorflow">https://github.com/carpedm20/DCGAN-tensorflow</a>. I don&rsquo;t have a GPU on this particular machine, so everything was running via CPU; I had to leave my machine for a day or two, and also use the <code>caffeinate</code> command on my Mac to keep it from going to sleep while the process ran (quick info on this <a href="http://brettterpstra.com/2014/02/20/quick-tip-caffeinate-your-terminal/">here</a>).</p>
-
+<p>I had more success with Taehoon Kim&rsquo;s &lsquo;tensorflow implementation of &ldquo;Deep Convolutional Generative Adversarial Networks&rdquo;', which is available on Github at <a href="https://github.com/carpedm20/DCGAN-tensorflow">https://github.com/carpedm20/DCGAN-tensorflow</a>. I don&rsquo;t have a GPU on this particular machine, so everything was running via CPU; I had to leave my machine for a day or two, and also use the <code>caffeinate</code> command on my Mac to keep it from going to sleep while the process ran (quick info on this <a href="http://brettterpstra.com/2014/02/20/quick-tip-caffeinate-your-terminal/">here</a>).</p>
 <p>I had a number of false starts. Chief amongst these was the composition of my training set.</p>
-
 <ol>
 <li>You need <em>lots</em> of images. Reading around, 10 000 seems to be a bottom minimum for meaningful results</li>
 <li>The images need to be thematically unified somehow. You can&rsquo;t just dump everything you&rsquo;ve got. I went through a recent scrape of instagram via the tag <code>skullforsale</code> and pulled out about 2300 skull images. That was enough to get the code to run, but as you&rsquo;ll see, not the best results. Of course, I was only trying to learn how to use the code and work out what the hidden gotchas were.</li>
 </ol>
-
 <h3 id="gotchas">Gotchas</h3>
-
 <p>Ah yes, the gotchas.</p>
-
 <ul>
 <li>images have to be small. Resize them to 256 x 256 or 64 x 64 pixels. Use Imagemagick&rsquo;s &lsquo;<a href="https://imagemagick.org/script/mogrify.php">mogrify</a>&rsquo; command.</li>
 <li>images have to be rgb</li>
@@ -376,54 +362,27 @@
 <li>running the code: use the dockerized version, and put the data inside the DATA folder.</li>
 <li>running the <code>main.py</code> script:  <code>--crop</code> always has to be appended.</li>
 </ul>
-
 <p>Command snippets:</p>
-
 <pre><code>convert image1.jpg -colorspace sRGB -type truecolor image1.jpg
-</code></pre>
-
-<p>make sure there are no grayscale images</p>
-
+</code></pre><p>make sure there are no grayscale images</p>
 <pre><code>identify -format &quot;%i %[colorspace]\n&quot; *.jpg | grep -v sRGB
-</code></pre>
-
-<p>convert images to 64x64</p>
-
+</code></pre><p>convert images to 64x64</p>
 <pre><code>mogrify -resize 64x64 *.jpg
-</code></pre>
-
-<p>convert to sRGB</p>
-
+</code></pre><p>convert to sRGB</p>
 <pre><code>mogrify -colorspace sRGB  *.jpg
-</code></pre>
-
-<p>run main.py</p>
-
+</code></pre><p>run main.py</p>
 <pre><code>python main.py --dataset=skulls --data_dir data --train --crop`
-</code></pre>
-
-<h3 id="results">Results?</h3>
-
+</code></pre><h3 id="results">Results?</h3>
 <p>I let the code run until it reached the end of its default iteration time (which is a function of the size of your images). Results were&hellip; unimpressive. With too small a dataset, the code would simply not run.</p>
-
 <p>Some outputs:</p>
-
-<p><img src="DjThnJEXoAEYk80.jpg" alt="after two epochs" /></p>
-
+<p><img src="DjThnJEXoAEYk80.jpg" alt="after two epochs"></p>
 <p>After nearly an hour the first visualization of the results after a mere two epochs of iterations&hellip; a dreamy mist-scape as the machine creates.</p>
-
-<p><img src="DjUh13bXgAA7kVY.jpg" alt="first actual working results" /></p>
-
+<p><img src="DjUh13bXgAA7kVY.jpg" alt="first actual working results"></p>
 <p>In this mosaic, which represents the results from my first actual working run (20 epochs), you can, if you squint, see a nightmarish vision of monstrous skulls. Too few images, I thought (about a thousand, at this point). So I spent several hours collecting more images, and tried again&hellip;</p>
-
-<p><img src="DjrlpMqW0AAnhD5.jpg" alt="results of a run" /></p>
-
+<p><img src="DjrlpMqW0AAnhD5.jpg" alt="results of a run"></p>
 <p>Maybe I&rsquo;m only seeing what I <em>want</em> to see, but I see hints of the orbital bones around the eyes, the bridge of the nose, in the top left side of each test image in the mosaic.</p>
-
 <p>So. I think this approach could prove productive, but I need a) more computing power b) more images c) run for <em>much much longer</em>.</p>
-
 <p>I wonder if I can remove my decision making process in the creation of the corpus from <em>this</em> process. Could I construct a pipeline that feeds the mass of images we&rsquo;ve created into a CNN, use the penultimate layer and some clustering to create various folders of similar images, and then pass the folders to the GAN to figure out what it&rsquo;s looking at, and visualize the individual neurons?</p>
-
 <p><em>update 2019-02-24</em> I&rsquo;ve had a lot more success using some higher end computing power I rented at <a href="https://www.paperspace.com/">Paperspace</a>. Figuring out just how to use it though, well, that was a trial. <a href="http://ml4a.github.io/classes/itp-F18/06/#">This lesson</a> from <a href="http://ml4a.github.io">ml4a.github.io</a> was invaluable.</p>
 
 
@@ -462,8 +421,7 @@
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.64.0" />
 <title>Using Etudier to Jump Start a Literature Review :: The Bonetrade Project</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -221,6 +221,13 @@
           </a><i class="fa fa-circle-thin read-icon"></i>
         </div>
     </li>
+      <li data-nav-id="/update/2019-06-17-skeleton-keys/" class="dd-item">
+        <div>
+          <a href="/update/2019-06-17-skeleton-keys/">
+            Skeleton Keys
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
       <li data-nav-id="/update/2019-02-24-learning-curve/" class="dd-item">
         <div>
           <a href="/update/2019-02-24-learning-curve/">
@@ -287,6 +294,7 @@
     <option value="/update/" >
    Updates</option> 
       <option value="/update/2019-04-18-blogdown-breakdown/" >- Blogdown Breakdown</option>
+      <option value="/update/2019-06-17-skeleton-keys/" >- Skeleton Keys</option>
       <option value="/update/2019-02-24-learning-curve/" >- Learning Curve</option>
       <option value="/update/2018-07-29-dcgan-for-archaeologists/" >- DCGAN for Archaeologists</option>
       <option value="/update/2018-06-14-tensorflow-for-poets/" >- Tensorflow for Poets</option>
@@ -319,39 +327,21 @@
     
     
     
-    
-
-<p>2018-04-30</p>
-
+    <p>2018-04-30</p>
 <h3 id="the-literature-review">The Literature Review</h3>
-
 <p>How do you start a literature review on a new project? We&rsquo;re not starting from scratch, of course - we&rsquo;ve got the pages of bibliography that we generated when we first starting scratching out what this project could be about. We started <em>that</em> step by considering the bibliography we had to hand as we wrote our first paper. Nothing is ever <em>truly</em> from scratch, in academia.</p>
-
 <p>But we can certainly jump start the process. One way we can do that is by pulling from one of the largest bibliographic databases readily to hand - Google Scholar. G-Scholar was built by ingesting several existing databases and is maintained by whatever magic Google uses to index journal websites and so on. We can search this database not only how we might search with the regular Google search page, but also via the citation graph. We can give it a reference, and search not only what <em>that</em> paper cites, but also the papers that cited it in turn. What&rsquo;s more, we can automate this process.</p>
-
-<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier-edsu.jpg" alt="Etudier" /></p>
-
+<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier-edsu.jpg" alt="Etudier"></p>
 <p>Ed Summers has created a python package called &lsquo;<a href="https://github.com/edsu/etudier">Etudier</a>&rsquo; which handles this for us. It mimics a user paging through search results. By default it only looks at the first ten citations for a page or a search result, and then the top 10 for each of those, thus 100 results. That might be enough to get going. But by fiddling with the <code>--pages</code> and <code>--depth</code> flags, you can collect much much more. <code>pages</code> will search through x number of pages of results, while <code>depth</code> will delve that far into each result&rsquo;s citations.</p>
-
 <p>I ran the following:</p>
-
 <pre><code>$etudier.py 'https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C21&amp;q=&quot;instagram&quot;&amp;btnG=' --pages 2 --depth 2
-</code></pre>
-
-<p>&hellip;to see what the broader landscape of scholarship around Instagram looked like. This produced 1.4 mb of results, or 1883 articles tied by 2179 edges.</p>
-
+</code></pre><p>&hellip;to see what the broader landscape of scholarship around Instagram looked like. This produced 1.4 mb of results, or 1883 articles tied by 2179 edges.</p>
 <p>As a graph, we spot something interesting right away:</p>
-
-<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier1.png" alt="A citation graph" /></p>
-
+<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier1.png" alt="A citation graph"></p>
 <p>Two broad clumps, or two extremely distinct ways of referring to &lsquo;Instagram&rsquo;. We can then explore subclumping by searching for communities or patterns of link similarities (aka as &lsquo;modularity&rsquo;):</p>
-
-<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier2.png" alt="Modularity within the citation graph" /></p>
-
+<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier2.png" alt="Modularity within the citation graph"></p>
 <p>Often however this kind of visualization is not of much use, other than how we&rsquo;ve already used it. Instead, let&rsquo;s look for centrality in this graph, and identify those works whose pattern of linkages enable them to bridge these various subgroups. I presume that such works have something about them that speaks to these different aspects of scholarship and so are the works that I&rsquo;ll want to start with for my review. Using <a href="http://gephi.org">gephi</a> I calculate eigenvector centrality (roughly, the centrality that comes from being wellconnected wellconnected others).</p>
-
-<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier3.png" alt="centralities in the graph" /></p>
-
+<p><img src="/update/2018-04-30-using-etudier-to-jump-start-a-literature-review_files/etudier3.png" alt="centralities in the graph"></p>
 <p>You can download our graph of data for yourself <a href="/Update/instagram-d2-p2-output-table-apr30-2018.csv">here</a>.</p>
 
 
@@ -390,8 +380,7 @@
 
 
   
-    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo" /></p>
-
+    <p><img src="https://raw.githubusercontent.com/bonetrade/bonetrade.github.io/master/_footer_files/SSHRC-CRSH_FIP.jpg" alt="SSHRC Logo"></p>
 <p>This research was supported by the Social Sciences and Humanities Research Council of Canada</p>
 
   
