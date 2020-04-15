@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Papers and Publications on The Bonetrade Project</title>
-    <link>https://bonetrade.github.io/papers/</link>
+    <link>/papers/</link>
     <description>Recent content in Papers and Publications on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 May 2019 18:36:24 +0200</lastBuildDate>
     
-	<atom:link href="https://bonetrade.github.io/papers/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/papers/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Slides: Public Lecture @ York University, What the Machine Saw</title>
-      <link>https://bonetrade.github.io/papers/york-05-29/</link>
+      <link>/papers/york-05-29/</link>
       <pubDate>Wed, 29 May 2019 18:36:24 +0200</pubDate>
       
-      <guid>https://bonetrade.github.io/papers/york-05-29/</guid>
+      <guid>/papers/york-05-29/</guid>
       <description>Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold. Spoke with a scholar in sweden last month, lovely fellow, who just didn&amp;rsquo;t see why anyone should care about bones: they do not mean anything to him, therefore it follows that anyone feeling different is just misguided.</description>
     </item>
     
     <item>
       <title>Slides: Investigating and Policing Antiquities Trafficking and Forgery in a Digital Age</title>
-      <link>https://bonetrade.github.io/papers/stockholm-04-25/</link>
+      <link>/papers/stockholm-04-25/</link>
       <pubDate>Thu, 25 Apr 2019 18:36:24 +0200</pubDate>
       
-      <guid>https://bonetrade.github.io/papers/stockholm-04-25/</guid>
+      <guid>/papers/stockholm-04-25/</guid>
       <description>which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
  narrator: we don&amp;rsquo;t  Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
 pompeian wall styles
@@ -35,10 +35,10 @@ human remains
     
     <item>
       <title>Slides: Workshop on Quantitative Analysis and the Digital Turn in Historical Studies</title>
-      <link>https://bonetrade.github.io/papers/fields-02-19/</link>
+      <link>/papers/fields-02-19/</link>
       <pubDate>Wed, 27 Feb 2019 18:36:24 +0200</pubDate>
       
-      <guid>https://bonetrade.github.io/papers/fields-02-19/</guid>
+      <guid>/papers/fields-02-19/</guid>
       <description>Note:
  late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
  Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
@@ -46,10 +46,10 @@ human remains
     
     <item>
       <title>Slides: Cultural Property Crime Seminar</title>
-      <link>https://bonetrade.github.io/papers/cultpropcrime-06-18/</link>
+      <link>/papers/cultpropcrime-06-18/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
+      <guid>/papers/cultpropcrime-06-18/</guid>
       <description>Note:
  late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
  Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>

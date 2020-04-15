@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Building a Website with Blogdown on The Bonetrade Project</title>
-    <link>https://bonetrade.github.io/tutorials/blogdown/</link>
+    <link>/tutorials/blogdown/</link>
     <description>Recent content in Building a Website with Blogdown on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://bonetrade.github.io/tutorials/blogdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tutorials/blogdown/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

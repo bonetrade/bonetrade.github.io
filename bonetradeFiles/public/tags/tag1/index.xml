@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag1 on DocDock Documentation</title>
+    <link>/tags/tag1/</link>
+    <description>Recent content in tag1 on DocDock Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Apr 2017 18:36:24 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Page</title>
+      <link>/create-page/</link>
+      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
+      
+      <guid>/create-page/</guid>
+      <description>Hugo-theme-docdock defines two types of pages. Default and Slide.
+ Default is the common page like the current one you are reading. Slide is a page that use the full screen to display its markdown content as a reveals.js presentation. HomePage is a special content that will be displayed as home page content.  To tell Hugo-theme-docdock to consider a page as a slide, just add a type=&amp;quot;slide&amp;quot;in then frontmatter of your file.</description>
+    </item>
+    
+    <item>
+      <title>Home page</title>
+      <link>/create-page/homepage/</link>
+      <pubDate>Fri, 28 Apr 2017 18:36:24 +0200</pubDate>
+      
+      <guid>/create-page/homepage/</guid>
+      <description>To tell Hugo-theme-docdock to consider a page as homepage&amp;rsquo;s content, just create a content file named _index.md in content folder.</description>
+    </item>
+    
+  </channel>
+</rss>
