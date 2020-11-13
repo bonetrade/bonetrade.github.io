@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Bonetrade: Studying the Online Trade in Human Remains on The Bonetrade Project</title>
-    <link>/</link>
+    <link>https://bonetrade.github.io/</link>
     <description>Recent content in The Bonetrade: Studying the Online Trade in Human Remains on The Bonetrade Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 Apr 2018 15:16:31 -0400</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bonetrade.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Slides: Public Lecture @ York University, What the Machine Saw</title>
-      <link>/papers/york-05-29/</link>
+      <link>https://bonetrade.github.io/papers/york-05-29/</link>
       <pubDate>Wed, 29 May 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/york-05-29/</guid>
+      <guid>https://bonetrade.github.io/papers/york-05-29/</guid>
       <description>Note: Would begin with territorial acknowledgement, if I was in Canada. But the material I study is traded through the internet; the trade transgresses borders, it transgresses time. So I will acknowledge the land on which Carleton stands. Because those people: those people have had their ancestors bought and sold. Spoke with a scholar in sweden last month, lovely fellow, who just didn&amp;rsquo;t see why anyone should care about bones: they do not mean anything to him, therefore it follows that anyone feeling different is just misguided.</description>
     </item>
     
     <item>
       <title>Slides: Investigating and Policing Antiquities Trafficking and Forgery in a Digital Age</title>
-      <link>/papers/stockholm-04-25/</link>
+      <link>https://bonetrade.github.io/papers/stockholm-04-25/</link>
       <pubDate>Thu, 25 Apr 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/stockholm-04-25/</guid>
+      <guid>https://bonetrade.github.io/papers/stockholm-04-25/</guid>
       <description>which presumes we know how archaeologists see Note: Sara Perry https://eprints.soton.ac.uk/344699/
  narrator: we don&amp;rsquo;t  Note: perry, hamilakis on vision, seeing, reification roopika risam on the kinds of humans our visualizations etc permit grounded &amp;amp; ungrounded antiquities try to talk about connaisseurship
 pompeian wall styles
@@ -35,10 +35,10 @@ human remains
     
     <item>
       <title>Blogdown Breakdown</title>
-      <link>/update/2019-04-18-blogdown-breakdown/</link>
+      <link>https://bonetrade.github.io/update/2019-04-18-blogdown-breakdown/</link>
       <pubDate>Thu, 18 Apr 2019 11:30:45 -0400</pubDate>
       
-      <guid>/update/2019-04-18-blogdown-breakdown/</guid>
+      <guid>https://bonetrade.github.io/update/2019-04-18-blogdown-breakdown/</guid>
       <description>2019-04-25 A Memo To Self on A Blogdown Breakdown
 Out of Cheese Error At Unseen University in Ankh-Morpork, Ponder Stibbons and his students have built Hex, a thinking machine. Sometimes, something crucial goes &amp;lsquo;sproing!&amp;rsquo; and Hex will report the helpful error message, &amp;lsquo;out of cheese error&amp;rsquo;. I felt a strong affinity this morning when I went to update this site with the slides from next week&amp;rsquo;s presentation in Stockholm.
 The command to build the site is blogdown::build_site().</description>
@@ -46,10 +46,10 @@ The command to build the site is blogdown::build_site().</description>
     
     <item>
       <title>Skeleton Keys</title>
-      <link>/update/2019-06-17-skeleton-keys/</link>
+      <link>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</link>
       <pubDate>Thu, 18 Apr 2019 11:30:45 -0400</pubDate>
       
-      <guid>/update/2019-06-17-skeleton-keys/</guid>
+      <guid>https://bonetrade.github.io/update/2019-06-17-skeleton-keys/</guid>
       <description>2019-04-25 Skeleton Keys &amp;amp; Popular Science Podcast
 Our work was referenced and discussed in a new popular science book by author Brian Switek, &amp;lsquo;Skeleton Keys: The Secret Life of Bone&amp;rsquo;. The book is discussed at https://www.popsci.com/skeleton-keys-excerpt/ . You can also listen to the &amp;lsquo;Weirdest Thing&amp;rsquo; podcast talk about our work at https://www.popsci.com/weirdest-thing-falcon-sex-instagram-bones-sleep-twitch/
  Archaeologists such as Damien Huffer track how human remains are marketed and sold over people’s smartphones, and, with colleague Shawn Graham, he dug into the mechanics of the trade in a 2017 paper called “The Insta‑Dead: The Rhetoric of the Human Remains Trade on Instagram.</description>
@@ -57,10 +57,10 @@ Our work was referenced and discussed in a new popular science book by author Br
     
     <item>
       <title>Slides: Workshop on Quantitative Analysis and the Digital Turn in Historical Studies</title>
-      <link>/papers/fields-02-19/</link>
+      <link>https://bonetrade.github.io/papers/fields-02-19/</link>
       <pubDate>Wed, 27 Feb 2019 18:36:24 +0200</pubDate>
       
-      <guid>/papers/fields-02-19/</guid>
+      <guid>https://bonetrade.github.io/papers/fields-02-19/</guid>
       <description>Note:
  late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
  Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
@@ -68,10 +68,10 @@ Our work was referenced and discussed in a new popular science book by author Br
     
     <item>
       <title>Learning Curve</title>
-      <link>/update/2019-02-24-learning-curve/</link>
+      <link>https://bonetrade.github.io/update/2019-02-24-learning-curve/</link>
       <pubDate>Sun, 24 Feb 2019 11:30:45 -0400</pubDate>
       
-      <guid>/update/2019-02-24-learning-curve/</guid>
+      <guid>https://bonetrade.github.io/update/2019-02-24-learning-curve/</guid>
       <description>2019-02-2
 It&amp;rsquo;s been steep We&amp;rsquo;ve been pretty quiet in terms of updates because, well, it&amp;rsquo;s been a helluva learning curve this year. Our other project - the Open Digital Archaeology Textbook Environment - won the AIA Award for Outstanding Work in Digital Archaeology, which was very gratifying as we could use some of what we were learning for this project to help expand that one.
 We also hosted a fantastic line up of speakers at Carleton University for the Shannon Lectures in History, on the theme of &amp;lsquo;Bad Archaeology&amp;rsquo; - all five lectures were videotaped and can be viewed at the History Department Youtube Channel.</description>
@@ -79,20 +79,20 @@ We also hosted a fantastic line up of speakers at Carleton University for the Sh
     
     <item>
       <title>DCGAN for Archaeologists</title>
-      <link>/update/2018-07-29-dcgan-for-archaeologists/</link>
+      <link>https://bonetrade.github.io/update/2018-07-29-dcgan-for-archaeologists/</link>
       <pubDate>Thu, 14 Jun 2018 08:35:47 -0400</pubDate>
       
-      <guid>/update/2018-07-29-dcgan-for-archaeologists/</guid>
+      <guid>https://bonetrade.github.io/update/2018-07-29-dcgan-for-archaeologists/</guid>
       <description>2018-07-29
 Learning about GANs Melvin Wevers has been using neural networks to understand visual patterns in the evolution of newspaper advertisements in Holland. He and his team developed a tool for visually searching the newspaper corpus. Melvin presented some of his research at #dh2018; he shared his poster and slides so I was able to have a look. Afterwards, I reached out to Melvin and we had a long conversation about using computer vision in historical research.</description>
     </item>
     
     <item>
       <title>Tensorflow for Poets</title>
-      <link>/update/2018-06-14-tensorflow-for-poets/</link>
+      <link>https://bonetrade.github.io/update/2018-06-14-tensorflow-for-poets/</link>
       <pubDate>Thu, 14 Jun 2018 08:35:47 -0400</pubDate>
       
-      <guid>/update/2018-06-14-tensorflow-for-poets/</guid>
+      <guid>https://bonetrade.github.io/update/2018-06-14-tensorflow-for-poets/</guid>
       <description>2018-06-14
 In our recent paper, &amp;lsquo;Fleshing Out the Bones&amp;rsquo; we used the trained &amp;lsquo;Inception 3&amp;rsquo; model as a way of determining clusters of images that we then studied for clues and hints: why did the machine cluster them this way? What are the common features?
 Unsupervised learning: It&amp;rsquo;s not unlike reading entrails.
@@ -101,30 +101,30 @@ An alternate approach is to take an existing model, and add new training data to
     
     <item>
       <title>Using Etudier to Jump Start a Literature Review</title>
-      <link>/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</link>
+      <link>https://bonetrade.github.io/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</link>
       <pubDate>Mon, 30 Apr 2018 11:30:45 -0400</pubDate>
       
-      <guid>/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</guid>
+      <guid>https://bonetrade.github.io/update/2018-04-30-using-etudier-to-jump-start-a-literature-review/</guid>
       <description>2018-04-30
 The Literature Review How do you start a literature review on a new project? We&amp;rsquo;re not starting from scratch, of course - we&amp;rsquo;ve got the pages of bibliography that we generated when we first starting scratching out what this project could be about. We started that step by considering the bibliography we had to hand as we wrote our first paper. Nothing is ever truly from scratch, in academia.</description>
     </item>
     
     <item>
       <title>Getting Started!</title>
-      <link>/update/2018-04-16-getting-started/</link>
+      <link>https://bonetrade.github.io/update/2018-04-16-getting-started/</link>
       <pubDate>Mon, 16 Apr 2018 15:16:31 -0400</pubDate>
       
-      <guid>/update/2018-04-16-getting-started/</guid>
+      <guid>https://bonetrade.github.io/update/2018-04-16-getting-started/</guid>
       <description>2018-04-16
 We&amp;rsquo;re underway! We received word at the end of March that this project has been funded. Since then, we&amp;rsquo;ve been doing the administrative work to get the project up and running - figuring out how to advertise for students, how to enable those students to study at Stockholm for a term or two, setting up the public face of this project, figuring out the internals of the research accounting system.</description>
     </item>
     
     <item>
       <title>Slides: Cultural Property Crime Seminar</title>
-      <link>/papers/cultpropcrime-06-18/</link>
+      <link>https://bonetrade.github.io/papers/cultpropcrime-06-18/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>/papers/cultpropcrime-06-18/</guid>
+      <guid>https://bonetrade.github.io/papers/cultpropcrime-06-18/</guid>
       <description>Note:
  late 19th century &amp;amp; scientific racism human zoos &amp;amp; the human cost   Abraham Ulrikab Note:
  Abraham Ulrikab Moravian Christians in Labrador. Convinved to come to Europe to be part of a human zoo, because Abraham trusted, wanted to see Europe. Realized immediately the mistake. Kept a diary, translation of which was recently surfaced. Skulls and bones of him and his family found in museum collections in Paris &amp;amp; Berlin.</description>
@@ -132,19 +132,19 @@ We&amp;rsquo;re underway! We received word at the end of March that this project
     
     <item>
       <title></title>
-      <link>/_footer/</link>
+      <link>https://bonetrade.github.io/_footer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/_footer/</guid>
+      <guid>https://bonetrade.github.io/_footer/</guid>
       <description>This research was supported by the Social Sciences and Humanities Research Council of Canada</description>
     </item>
     
     <item>
       <title>Credits</title>
-      <link>/credits/</link>
+      <link>https://bonetrade.github.io/credits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/credits/</guid>
+      <guid>https://bonetrade.github.io/credits/</guid>
       <description>Principle Investigators Shawn Graham Graham is an archaeologist who is currently Associate Professor of Digital Humanities in the History Department at Carleton University. With Ian Milligan and Scott Weingart, he is the author of ‘Exploring Historical Big Data: The &amp;lsquo;Historian’s Macroscope’ (2015). He has written a number of tutorials for The Programming Historian and his research blog (e.g., 2016b) on different computational techniques for both analysis and representation of historical data.</description>
     </item>
     
